@@ -1,0 +1,430 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "nether"
+	group: "59F6A6B40F15A816"
+	icon: {
+		Count: 1b
+		id: "ftbquests:custom_icon"
+		tag: {
+			Icon: "minecraft:block/nether_portal"
+		}
+	}
+	id: "01C2D32DA05248C9"
+	order_index: 2
+	quest_links: [{
+		id: "2F1F1F5A55197B67"
+		linked_quest: "27B28A53F0EFE604"
+		x: 0.0d
+		y: -0.5d
+	}]
+	quests: [
+		{
+			dependencies: ["27B28A53F0EFE604"]
+			icon: {
+				Count: 1b
+				id: "ftbquests:custom_icon"
+				tag: {
+					Icon: "minecraft:block/netherrack"
+				}
+			}
+			id: "7406EB98BD1E48B3"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "67144AA43B78B7EC"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				biome: "minecraft:nether_wastes"
+				id: "6028C9FF67CB52DF"
+				title: "Visit nether wastes"
+				type: "biome"
+			}]
+			x: 2.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["27B28A53F0EFE604"]
+			icon: {
+				Count: 1b
+				id: "ftbquests:custom_icon"
+				tag: {
+					Icon: "minecraft:block/warped_stem"
+				}
+			}
+			id: "6F74F884F42EC596"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "79639FF20BD38019"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				biome: "minecraft:warped_forest"
+				id: "649CFD56F3F070DB"
+				title: "Visit warped forest"
+				type: "biome"
+			}]
+			x: 2.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["27B28A53F0EFE604"]
+			icon: {
+				Count: 1b
+				id: "ftbquests:custom_icon"
+				tag: {
+					Icon: "minecraft:block/crimson_stem"
+				}
+			}
+			id: "7DFFD1F66AB6296F"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "52A3EB2AFA60772D"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				biome: "minecraft:crimson_forest"
+				id: "1882805B6805451A"
+				type: "biome"
+			}]
+			title: "Visit crimson forest"
+			x: 2.0d
+			y: -3.5d
+		}
+		{
+			dependencies: ["27B28A53F0EFE604"]
+			id: "7A8AA03D9C67D6B7"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "3F34BE9EF2848B6E"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				biome: "minecraft:basalt_deltas"
+				icon: {
+					Count: 1b
+					id: "ftbquests:custom_icon"
+					tag: {
+						Icon: "minecraft:block/smooth_basalt"
+					}
+				}
+				id: "40BB818F25D42D4C"
+				title: "Visit basalt delta"
+				type: "biome"
+			}]
+			x: 2.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["27B28A53F0EFE604"]
+			id: "1AFE8D1CE55C1527"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "71A1FCB3085C6DF1"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				advancement: "minecraft:nether/find_bastion"
+				criterion: ""
+				icon: {
+					Count: 1b
+					id: "ftbquests:custom_icon"
+					tag: {
+						Icon: "minecraft:block/blackstone"
+					}
+				}
+				id: "3D64BAABCD90DCEE"
+				title: "Enter a Bastion"
+				type: "advancement"
+			}]
+			title: "Enter a &dBastion&r"
+			x: 4.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["27B28A53F0EFE604"]
+			id: "62DE24AD061AC90F"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "01534280566C1C60"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				advancement: "minecraft:nether/find_fortress"
+				criterion: ""
+				id: "0A4D51499A5FBDE4"
+				title: "Visit a nether fortress"
+				type: "advancement"
+			}]
+			title: "Visit a &dNether Fortress&r"
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["62DE24AD061AC90F"]
+			id: "0C5F842394B5832E"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "78EDF90856A85182"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [
+				{
+					count: 3L
+					id: "200B4FA3FF53C975"
+					item: "minecraft:wither_skeleton_skull"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "6007B13CF405F07D"
+					item: "minecraft:soul_sand"
+					type: "item"
+				}
+			]
+			title: "Collect 3 &dWither Skulls&r and 4 soul sand"
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1AFE8D1CE55C1527"]
+			id: "30561294091DA7DF"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "76EF21CD61381C63"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				id: "52CFEFCA4E603FFE"
+				item: "minecraft:netherite_upgrade_smithing_template"
+				only_from_crafting: false
+				type: "item"
+			}]
+			x: 6.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["1AFE8D1CE55C1527"]
+			id: "7E1FBB05461507D4"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "1866B0897EDACC54"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				id: "0BE5548786499CBF"
+				item: "minecraft:music_disc_pigstep"
+				type: "item"
+			}]
+			x: 6.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["62DE24AD061AC90F"]
+			id: "3F28400EE8FFE9A9"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "1C61D049A1E68043"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Collect nether wart and soul sand"
+			tasks: [
+				{
+					id: "7D5E0B1686DA21BC"
+					item: "minecraft:nether_wart"
+					type: "item"
+				}
+				{
+					id: "0F50F1A709018055"
+					item: "minecraft:soul_sand"
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["1AFE8D1CE55C1527"]
+			id: "32C0A6D61ABF076F"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "53334106D395D527"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				id: "1176AD1FB1B52747"
+				item: "minecraft:ancient_debris"
+				type: "item"
+			}]
+			x: 6.0d
+			y: -2.0d
+		}
+		{
+			dependencies: [
+				"32C0A6D61ABF076F"
+				"30561294091DA7DF"
+			]
+			icon: {
+				Count: 1b
+				id: "ftbquests:custom_icon"
+				tag: {
+					Icon: "minecraft:item/netherite_ingot"
+				}
+			}
+			id: "1AB5695E3FFA5338"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "4C845E84BAB4F998"
+					type: "xp"
+					xp: 10
+				}
+				{
+					count: 4
+					id: "494A656663FCA0FD"
+					item: "minecraft:gold_ingot"
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					count: 4L
+					id: "414900D373A4754D"
+					item: "minecraft:netherite_scrap"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "40BB9C592D67359D"
+					item: "minecraft:gold_ingot"
+					type: "item"
+				}
+				{
+					id: "1CD50F468115CB24"
+					item: "minecraft:netherite_ingot"
+					type: "item"
+				}
+			]
+			title: "Make a &dNetherite Ingot&r"
+			x: 7.5d
+			y: -1.5d
+		}
+		{
+			dependencies: [
+				"0C5F842394B5832E"
+				"3F28400EE8FFE9A9"
+			]
+			id: "48573F9B8B326804"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "64509969CA3B3FDE"
+					type: "xp"
+					xp: 10
+				}
+				{
+					count: 4
+					id: "17786800184B1E2D"
+					item: "minecraft:soul_sand"
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					advancement: "minecraft:nether/summon_wither"
+					criterion: ""
+					id: "6DDACC6E5F3CC55C"
+					type: "advancement"
+				}
+				{
+					entity: "minecraft:wither"
+					id: "5A5B0B88EFD0871A"
+					type: "kill"
+					value: 1L
+				}
+			]
+			title: "Summon and kill &dThe Wither&r"
+			x: 7.5d
+			y: 0.5d
+		}
+		{
+			dependencies: ["48573F9B8B326804"]
+			icon: "minecraft:beacon"
+			id: "4DE18CB6F344809A"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "14736CDB97C65F22"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "20A4763DE7C30339"
+					item: "minecraft:emerald_block"
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					advancement: "minecraft:nether/create_beacon"
+					criterion: ""
+					id: "502AB795586151A2"
+					type: "advancement"
+				}
+				{
+					advancement: "minecraft:nether/create_full_beacon"
+					criterion: ""
+					id: "5F4FB0AA4D9307F9"
+					type: "advancement"
+				}
+			]
+			title: "Make a fully powered beacon"
+			x: 9.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["1AB5695E3FFA5338"]
+			id: "6FF933A5EB730FBA"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "7A149CF4F7881EC1"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "6CEF660A2E3288F5"
+					item: "minecraft:netherite_upgrade_smithing_template"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "46891E7AEBD93301"
+				item: {
+					Count: 1b
+					id: "minecraft:netherite_pickaxe"
+					tag: {
+						Damage: 0
+					}
+				}
+				only_from_crafting: false
+				type: "item"
+			}]
+			title: "Upgrade your pickaxe"
+			x: 9.0d
+			y: -1.5d
+		}
+	]
+	title: "&dThe Nether&r"
+}

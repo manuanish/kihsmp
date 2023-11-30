@@ -1,0 +1,97 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "cooking_for_blockheads"
+	group: "6981D7E878DEC9BC"
+	icon: {
+		Count: 1b
+		id: "ftbquests:custom_icon"
+		tag: {
+			Icon: "farmersdelight:block/rice_panicles_stage3"
+		}
+	}
+	id: "50688314B5DF6BBD"
+	order_index: 1
+	quest_links: [{
+		id: "7DD074DB5D102032"
+		linked_quest: "0228747D6C21928F"
+		x: 0.0d
+		y: 0.0d
+	}]
+	quests: [
+		{
+			dependencies: ["0228747D6C21928F"]
+			id: "72D5A05CE8369B40"
+			progression_mode: "flexible"
+			tasks: [{
+				id: "1532E641D5A4ED57"
+				item: "farmersdelight:stove"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0228747D6C21928F"]
+			id: "032BE64C1D0838A6"
+			progression_mode: "flexible"
+			tasks: [{
+				id: "5C049AA0EFFCA938"
+				item: "farmersdelight:cooking_pot"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["0228747D6C21928F"]
+			id: "233E112F5C4554B9"
+			progression_mode: "flexible"
+			tasks: [{
+				id: "34A041027ED34BD9"
+				item: {
+					Count: 1b
+					id: "farmersdelight:skillet"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: 0.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["0228747D6C21928F"]
+			id: "3C3E68899CA1B673"
+			progression_mode: "flexible"
+			tasks: [{
+				id: "039C66E63587578F"
+				item: "farmersdelight:cutting_board"
+				type: "item"
+			}]
+			x: -1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3C3E68899CA1B673"]
+			id: "5BD6386440E978F2"
+			progression_mode: "flexible"
+			tasks: [{
+				id: "651795093EA92D3A"
+				item: {
+					Count: 1b
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:tools/knives"
+					}
+				}
+				title: "Any #forge:tools/knives"
+				type: "item"
+			}]
+			x: -2.5d
+			y: -1.5d
+		}
+	]
+	title: "Farmer's Delight"
+}

@@ -1,0 +1,1648 @@
+{
+	default_hide_dependency_lines: true
+	default_quest_shape: ""
+	filename: "overworld"
+	group: "0AE5CAEAEA9F972D"
+	icon: {
+		Count: 1b
+		id: "ftbquests:custom_icon"
+		tag: {
+			Icon: "alexsmobs:item/bison_fur"
+		}
+	}
+	id: "4687796608CF1847"
+	order_index: 0
+	quest_links: [{
+		id: "054A139A51271C08"
+		linked_quest: "13E39EE147F3A618"
+		x: 0.0d
+		y: -4.0d
+	}]
+	quests: [
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "058E7EF2548DD97C"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "47367CFA5827B242"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				entity: "alexsmobs:alligator_snapping_turtle"
+				id: "40077E0D82AAF62A"
+				title: "Kill an Alligator Snapping Turtle"
+				type: "kill"
+				value: 1L
+			}]
+			x: -2.5d
+			y: -8.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "42EC247E6A495D39"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "0AA0BF1F3F295483"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				entity: "alexsmobs:anaconda"
+				id: "7EF6FEF11BA9E968"
+				title: "Kill an Anaconda"
+				type: "kill"
+				value: 1L
+			}]
+			x: -1.5d
+			y: -8.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "017501A9F45E97AF"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "27B3BA25589507BB"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				entity: "alexsmobs:anteater"
+				id: "0E6BC77ABC90912C"
+				title: "Kill an Anteater"
+				type: "kill"
+				value: 1L
+			}]
+			x: -0.5d
+			y: -8.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "0CB99881D8F37438"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "1A62C296ADDDDA06"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				entity: "alexsmobs:bald_eagle"
+				id: "778384D8D0CFAD2F"
+				title: "Kill a Bald Eagle"
+				type: "kill"
+				value: 1L
+			}]
+			x: 0.5d
+			y: -8.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "3A74FC7DFB3161C7"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "4AB3EDFCFF8C1CD3"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "326EA7CE7F17428B"
+					item: "alexsmobs:banana_slug_slime"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "alexsmobs:banana_slug"
+				id: "4193F5CDD2A3EDA7"
+				title: "Kill a Banana Slug"
+				type: "kill"
+				value: 1L
+			}]
+			x: 1.5d
+			y: -8.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "55A6028E370D7C32"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "75D8B036AB3F4635"
+					type: "xp"
+					xp: 10
+				}
+				{
+					count: 6
+					id: "347D26724406B957"
+					item: "minecraft:beef"
+					type: "item"
+				}
+				{
+					id: "057AE5895A769D1D"
+					item: "alexsmobs:bison_fur"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "alexsmobs:bison"
+				id: "582563C746408179"
+				title: "Kill a Bison"
+				type: "kill"
+				value: 1L
+			}]
+			x: 2.5d
+			y: -8.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "220CF6985690EFCE"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "18C1F01685D880E6"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "79F36C99A6D478D9"
+					item: "alexsmobs:blobfish"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "alexsmobs:blobfish"
+				id: "681EC0D0299CE4FE"
+				title: "Kill a Blobfish"
+				type: "kill"
+				value: 1L
+			}]
+			x: -5.5d
+			y: -7.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "3F3E191FD87B0F35"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "10DE7A5D8BE4010A"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				entity: "alexsmobs:blue_jay"
+				id: "33C6EEBF5D1F8C90"
+				title: "Kill a Blue Jay"
+				type: "kill"
+				value: 1L
+			}]
+			x: -4.5d
+			y: -7.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "77595324BF5F66B2"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "02FD2C46D0D30958"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "634C998681825212"
+					item: "minecraft:red_mushroom"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "alexsmobs:bunfungus"
+				id: "6633F8A0191B713F"
+				title: "Kill a Bunfungus"
+				type: "kill"
+				value: 1L
+			}]
+			x: -3.5d
+			y: -7.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "7EF4727D72C4530A"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "17A1E73BF691FF80"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				entity: "alexsmobs:cachalot_whale"
+				id: "573971397396A3C4"
+				title: "Kill a Cachalot Whale"
+				type: "kill"
+				value: 1L
+			}]
+			x: -2.5d
+			y: -7.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "14127AECE3C776CD"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "1FE1D6770121ACBE"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				entity: "alexsmobs:caiman"
+				id: "637CE8E8340DDA4A"
+				title: "Kill a Caiman"
+				type: "kill"
+				value: 1L
+			}]
+			x: -1.5d
+			y: -7.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "4C6817A5C44669D0"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "25072B5150E73B89"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				entity: "alexsmobs:capuchin_monkey"
+				id: "3B0712090948E9FC"
+				title: "Kill a Capuchin Monkey"
+				type: "kill"
+				value: 1L
+			}]
+			x: -0.5d
+			y: -7.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "1FDF9320C2F6803D"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "0DCF574A2D4EB85F"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "58048F6610A0D148"
+					item: "alexsmobs:raw_catfish"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "alexsmobs:catfish"
+				id: "4D8C105DAA55FEEE"
+				title: "Kill a Catfish"
+				type: "kill"
+				value: 1L
+			}]
+			x: 0.5d
+			y: -7.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "49FBE47B2A89F9DD"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "1935A9EB29FA0826"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "16BFB85DE96AADB7"
+					item: "alexsmobs:centipede_leg"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "alexsmobs:centipede_head"
+				id: "2B9E0C438452ED81"
+				title: "Kill a Cave Centipede"
+				type: "kill"
+				value: 1L
+			}]
+			x: 1.5d
+			y: -7.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "34E3574545DB7A7B"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "7492981B490E7BBA"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "539D284B6D7CF0C0"
+					item: "alexsmobs:cockroach_wing_fragment"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "alexsmobs:cockroach"
+				id: "6049DE1D991FDD12"
+				title: "Kill a Cockroach"
+				type: "kill"
+				value: 1L
+			}]
+			x: 2.5d
+			y: -7.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "23E57434C8E118DB"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "339BA463E11B9413"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "0DD811A85725B500"
+					item: "alexsmobs:rainbow_jelly"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "alexsmobs:comb_jelly"
+				id: "7E8F4EA108E8DA85"
+				title: "Kill a Comb Jelly"
+				type: "kill"
+				value: 1L
+			}]
+			x: 3.5d
+			y: -7.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "2473B230C3F1AD40"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "5494D4CF7CD13A22"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "4AD19EC948DB0B6B"
+					item: "alexsmobs:crocodile_scute"
+					type: "item"
+				}
+				{
+					id: "7DC1FA9270E89373"
+					item: "alexsmobs:crocodile_egg"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "alexsmobs:crocodile"
+				id: "785E0BB7F76821DB"
+				title: "Kill a Crocodile"
+				type: "kill"
+				value: 1L
+			}]
+			x: 4.5d
+			y: -7.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "19F67847A7B2A14A"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "48E436CBB03F3071"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				entity: "alexsmobs:crow"
+				id: "246488068524F84A"
+				title: "Kill a Crow"
+				type: "kill"
+				value: 1L
+			}]
+			x: 5.5d
+			y: -7.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "69108ABB84A46E26"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "17F571F4C7969F0C"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				entity: "alexsmobs:devils_hole_pupfish"
+				id: "3516075AE920DF74"
+				title: "Kill a Devil's Hole Pupfish"
+				type: "kill"
+				value: 1L
+			}]
+			x: -5.5d
+			y: -6.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "4D3AFDCEB196138F"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "141B90EC041B9DA5"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "6137DBA9EC050E03"
+					item: "minecraft:sea_pickle"
+					type: "item"
+				}
+			]
+			subtitle: "Hopefully you end up better than &6Pickles&r"
+			tasks: [{
+				entity: "alexsmobs:elephant"
+				id: "1BF284587CDA1ECC"
+				title: "Kill an Elephant"
+				type: "kill"
+				value: 1L
+			}]
+			x: -4.5d
+			y: -6.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "42DD8F845207ADFE"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "1B78058FEE67BCCD"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "7597530991F9CADE"
+					item: "alexsmobs:emu_feather"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "alexsmobs:emu"
+				id: "2855FFF9B55667F3"
+				title: "Kill an Emu"
+				type: "kill"
+				value: 1L
+			}]
+			x: -3.5d
+			y: -6.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "6AADEF7F7FCE9A41"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "4DF22C6B4A723C12"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "5369A45348E6135F"
+					item: "minecraft:spore_blossom"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "alexsmobs:flutter"
+				id: "1C1F910116E5B90A"
+				title: "Kill a Flutter"
+				type: "kill"
+				value: 1L
+			}]
+			x: -2.5d
+			y: -6.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "1C997F1CBAE70C18"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "3939A181EBC9F32B"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "65DDB06A2877DCA6"
+					item: "alexsmobs:maggot"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "alexsmobs:fly"
+				id: "23197BC135CF0AAA"
+				title: "Kill a Fly"
+				type: "kill"
+				value: 1L
+			}]
+			x: -1.5d
+			y: -6.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "7B610A111BF9EA38"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "72CB5044E3D4EC1F"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "000026809EADCD57"
+					item: "alexsmobs:flying_fish"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "alexsmobs:flying_fish"
+				id: "76E31FF1DBD74CB3"
+				title: "Kill a Flying Fish"
+				type: "kill"
+				value: 1L
+			}]
+			x: -0.5d
+			y: -6.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "40C8D3E7763D7430"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "06E53E26F137E436"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				entity: "alexsmobs:frilled_shark"
+				id: "3DBA4D85BD92DD9E"
+				title: "Kill a Frilled Shark"
+				type: "kill"
+				value: 1L
+			}]
+			x: 0.5d
+			y: -6.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "30379D7DBC45EE82"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "34216F3DE7AA3912"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "0A605A3F36B0CFBD"
+					item: "alexsmobs:froststalker_horn"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "alexsmobs:froststalker"
+				id: "09F8780CDED10D56"
+				title: "Kill a Froststalker"
+				type: "kill"
+				value: 1L
+			}]
+			x: 1.5d
+			y: -6.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "08012B3933DC6B0E"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "77B95D7AD2BD9E1C"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "08BA65538D02F972"
+					item: "minecraft:mutton"
+					type: "item"
+				}
+				{
+					id: "54DC78C906371FE9"
+					item: "alexsmobs:gazelle_horn"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "alexsmobs:gazelle"
+				id: "2AB4B4B7505FA7C1"
+				title: "Kill a Gazelle"
+				type: "kill"
+				value: 1L
+			}]
+			x: 2.5d
+			y: -6.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "1F0BB03A45C2EE0C"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "6C689502698DB34E"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				entity: "alexsmobs:gelada_monkey"
+				id: "040975008C2CCE79"
+				title: "Kill a Gelanda Monkey"
+				type: "kill"
+				value: 1L
+			}]
+			x: 3.5d
+			y: -6.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "16DE7C593C0AFA5D"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "4AA99D058FE050F4"
+					type: "xp"
+					xp: 10
+				}
+				{
+					count: 4
+					id: "19963C37F895D03A"
+					item: "minecraft:ink_sac"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "alexsmobs:giant_squid"
+				id: "5129B8151E872B65"
+				title: "Kill a Giant Squid"
+				type: "kill"
+				value: 1L
+			}]
+			x: 4.5d
+			y: -6.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "6463BE491FE4AFBF"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "72A9F79EF06254E4"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				entity: "alexsmobs:gorilla"
+				id: "42D0632DDAB89E99"
+				title: "Kill a Gorilla"
+				type: "kill"
+				value: 1L
+			}]
+			x: 5.5d
+			y: -6.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "5CF0E3064CB3E92E"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "33C03615C4C52C07"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "591BB1A2A6E0A33B"
+					item: "alexsmobs:guster_eye"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "alexsmobs:guster"
+				id: "643DAD78E81A6213"
+				title: "Kill a Guster"
+				type: "kill"
+				value: 1L
+			}]
+			x: -1.5d
+			y: -5.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "5578E394A43B0A89"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "1B88AB1679DB3D14"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "5A73EB27C86EA1F3"
+					item: "alexsmobs:bear_fur"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "alexsmobs:grizzly_bear"
+				id: "09D79657A5D109B0"
+				title: "Kill a Grizzly Bear"
+				type: "kill"
+				value: 1L
+			}]
+			x: -2.5d
+			y: -5.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "66A939EF7BF28475"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "571232560F08305C"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				entity: "alexsmobs:hammerhead_shark"
+				id: "155A4CAEC00436C7"
+				title: "Kill a Hammerhead Shark"
+				type: "kill"
+				value: 1L
+			}]
+			x: -0.5d
+			y: -5.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "48534EC67F05CD7F"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "5379239D713CDFD3"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				entity: "alexsmobs:hummingbird"
+				id: "2ED310425DF7FE59"
+				title: "Kill a Hummingbird"
+				type: "kill"
+				value: 1L
+			}]
+			x: 0.5d
+			y: -5.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "4AB17AC5A8C00875"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "25C42E106563C48F"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				entity: "alexsmobs:jerboa"
+				id: "5859FBB890B9E5AE"
+				title: "Kill a Jerboa"
+				type: "kill"
+				value: 1L
+			}]
+			x: 1.5d
+			y: -5.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "17EB8505DC493C61"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "08DBBA7E0A5E21B7"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "0B30700EC3549C85"
+					item: "alexsmobs:kangaroo_meat"
+					type: "item"
+				}
+				{
+					id: "294D4A9EF2809CF6"
+					item: "alexsmobs:kangaroo_hide"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "alexsmobs:kangaroo"
+				id: "6E37CAFD14F0F11D"
+				title: "Kill a Kangaroo"
+				type: "kill"
+				value: 1L
+			}]
+			x: 2.5d
+			y: -5.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "67462CFE5CC334AA"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "579153C5BB53FC97"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				entity: "alexsmobs:komodo_dragon"
+				id: "53BC2BE8956458CA"
+				title: "Kill a Komodo Dragon"
+				type: "kill"
+				value: 1L
+			}]
+			x: -2.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "532DEBFC7FD80E07"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "742C61F348F54213"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				entity: "alexsmobs:leafcutter_ant"
+				id: "5C99567C7AD226BE"
+				title: "Kill a Leafcutter Ant"
+				type: "kill"
+				value: 1L
+			}]
+			x: -1.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "45C6F836A57A928C"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "278A793BAE777C49"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "3A99748678C32336"
+					item: "alexsmobs:lobster_tail"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "alexsmobs:lobster"
+				id: "1E40BA59DDE2A9BC"
+				title: "Kill a Lobster"
+				type: "kill"
+				value: 1L
+			}]
+			x: -0.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "47D3D4D0DA12DEF4"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "407B6109F0C2619E"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				entity: "alexsmobs:maned_wolf"
+				id: "13485F50252B22D9"
+				title: "Kill a Maned Wolf"
+				type: "kill"
+				value: 1L
+			}]
+			x: 0.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "23439272351548D0"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "631C1F829D9F7349"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				entity: "alexsmobs:mantis_shrimp"
+				id: "64867BFAD0388596"
+				title: "Kill a Mantis Shrimp"
+				type: "kill"
+				value: 1L
+			}]
+			x: 1.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "12833817E6DE6784"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "57C712B4C54ECD37"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "164EA8E3FEEFB7F7"
+					item: "minecraft:ink_sac"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "alexsmobs:mimic_octopus"
+				id: "5DCCDB29014C648D"
+				title: "Kill a Mimic Octopus"
+				type: "kill"
+				value: 1L
+			}]
+			x: 2.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "0276AE7BA5BEE7E4"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "4CDA04E1CC5C39F6"
+					type: "xp"
+					xp: 10
+				}
+				{
+					count: 2
+					id: "4A4D5C0D8CE5A012"
+					item: "alexsmobs:moose_ribs"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "alexsmobs:moose"
+				id: "160950CA82184E9C"
+				title: "Kill a Moose"
+				type: "kill"
+				value: 1L
+			}]
+			x: -5.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "3AA6BEE6EB46B892"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "6BE2A46385C7BEA3"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "624C94D8190E994E"
+					item: "minecraft:tropical_fish"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "alexsmobs:mudskipper"
+				id: "2B5A5FF4B3388D48"
+				title: "Kill a Mudskipper"
+				type: "kill"
+				value: 1L
+			}]
+			x: -4.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "074425F442ABB38D"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "684A9328C41BC7C2"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				entity: "alexsmobs:mungus"
+				id: "10DAABDCD034DF23"
+				title: "Kill a Mungus"
+				type: "kill"
+				value: 1L
+			}]
+			x: -3.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "67B52733B3EF08EF"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "7046694E43B7340F"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "543CD9B57BF43FED"
+					item: "alexsmobs:elastic_tendon"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "alexsmobs:murmur"
+				id: "4C6642420AB1EF76"
+				title: "Kill a Murmur"
+				type: "kill"
+				value: 1L
+			}]
+			x: -2.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "58369F107D45D59F"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "1DC4BE0E2CCD88AD"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				entity: "alexsmobs:orca"
+				id: "384BEB05C0FACECF"
+				title: "Kill an Orca"
+				type: "kill"
+				value: 1L
+			}]
+			x: -1.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "39BBD251FF443172"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "52CD07843D7F8E6C"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				entity: "alexsmobs:platypus"
+				id: "5930692C7357916B"
+				title: "Kill a Platypus"
+				type: "kill"
+				value: 1L
+			}]
+			x: -0.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "574A59E9DBADF36A"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "01EA7E81E43B71EB"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				entity: "alexsmobs:potoo"
+				id: "58BE9483B71F09A4"
+				title: "Kill a Potoo"
+				type: "kill"
+				value: 1L
+			}]
+			x: 0.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "564A55C463E8669C"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "7596B6FCCF12E9E2"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "18BEA919017F0A62"
+					item: "alexsmobs:raccoon_tail"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "alexsmobs:raccoon"
+				id: "52DE39C25A7946EE"
+				title: "Kill a Racoon"
+				type: "kill"
+				value: 1L
+			}]
+			x: 1.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "1FAD4C532B260131"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "1BE69CE6A458BDC5"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				entity: "alexsmobs:rain_frog"
+				id: "008B7B94F9BBE363"
+				title: "Kill a Rain Frog"
+				type: "kill"
+				value: 1L
+			}]
+			x: 2.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "538FC3C4C5C9578D"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "003E080D3A647AAE"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "0B12D9578B437985"
+					item: "alexsmobs:rattlesnake_rattle"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "alexsmobs:rattlesnake"
+				id: "789AB0F8D9FF257B"
+				title: "Kill a Rattlesnake"
+				type: "kill"
+				value: 1L
+			}]
+			x: 3.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "6FBEBA77BD619DB3"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "14F846743329DC39"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				entity: "alexsmobs:rhinoceros"
+				id: "1154AB3751C305E6"
+				title: "Kill a Rhinoceros"
+				type: "kill"
+				value: 1L
+			}]
+			x: 4.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "79C84D53CE5CA519"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "3C9DC608F29A8B9E"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "0627015DEA25B4C8"
+					item: "alexsmobs:roadrunner_feather"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "alexsmobs:roadrunner"
+				id: "7E5E2568FE28F531"
+				title: "Kill a Roadrunner"
+				type: "kill"
+				value: 1L
+			}]
+			x: 5.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "710EBA881039CC6C"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "2359F453F8A15ACB"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "6352F67538F935D8"
+					item: "alexsmobs:rocky_shell"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "alexsmobs:rocky_roller"
+				id: "48297CBF7D71745A"
+				title: "Kill a Rocky Roller"
+				type: "kill"
+				value: 1L
+			}]
+			x: -5.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "0D5A8EFD83251290"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "024E937F29F73BDE"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				entity: "alexsmobs:seagull"
+				id: "083C57B95DE3E16F"
+				title: "Kill a Seagull"
+				type: "kill"
+				value: 1L
+			}]
+			x: -4.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "723615EA233B11DD"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "0B8C4101B105E066"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				entity: "alexsmobs:seal"
+				id: "583E99517724F247"
+				title: "Kill a Seal"
+				type: "kill"
+				value: 1L
+			}]
+			x: -3.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "4AD75805A965D292"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "51E0AD467C862F54"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				entity: "alexsmobs:shoebill"
+				id: "7D35354F3BE0F521"
+				title: "Kill a Shoebill"
+				type: "kill"
+				value: 1L
+			}]
+			x: -2.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "5E4D29AC084BEB86"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "2D38CD1FC58D242A"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "4AB78D2A6712CC66"
+					item: "alexsmobs:fish_bones"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "alexsmobs:skelewag"
+				id: "614B5AE17122334F"
+				title: "Kill a Skelewag"
+				type: "kill"
+				value: 1L
+			}]
+			x: -1.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "4571EE2BC487C4DB"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "0934BCBF3C0CF9BC"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "223C306E39A8F9BF"
+					item: "alexsmobs:skreecher_soul"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "alexsmobs:skreecher"
+				id: "3AC4129A95AB5770"
+				title: "Kill a Skreecher"
+				type: "kill"
+				value: 1L
+			}]
+			x: -0.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "6FB3824B0DC72345"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "61C35DA5A4B6E758"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				entity: "alexsmobs:skunk"
+				id: "3A6D7ACC18BECFC7"
+				title: "Kill a Skunk"
+				type: "kill"
+				value: 1L
+			}]
+			x: 0.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "3D1CD998D144B67E"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "6931DC5509F9B318"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				entity: "alexsmobs:snow_leopard"
+				id: "732597B5E0A3542C"
+				title: "Kill a Snow Leopard"
+				type: "kill"
+				value: 1L
+			}]
+			x: 1.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "232F1603F595662D"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "1604639A9EA5C25F"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				entity: "alexsmobs:sugar_glider"
+				id: "6C6E539822386A1A"
+				title: "Kill a Sugar Glider"
+				type: "kill"
+				value: 1L
+			}]
+			x: 2.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "029BA2A8C9AAA1D1"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "276746E18FF004CA"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				entity: "alexsmobs:sunbird"
+				id: "445C3C0AA717F5E8"
+				title: "Kill a Sunbird"
+				type: "kill"
+				value: 1L
+			}]
+			x: 3.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "63C94A8E7ACA615C"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "026D19CAE37E73A5"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "5AE97C5EB9DDF494"
+					item: "alexsmobs:tarantula_hawk_wing_fragment"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "alexsmobs:tarantula_hawk"
+				id: "53C6DB6BC4A2526B"
+				title: "Kill a Tarantula Hawk"
+				type: "kill"
+				value: 1L
+			}]
+			x: 4.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "10B3B995BBAB1633"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "357B9AE7EE489976"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				entity: "alexsmobs:tasmanian_devil"
+				id: "2FD35CD9BCEE9A7B"
+				title: "Kill a Tasmanian Devil"
+				type: "kill"
+				value: 1L
+			}]
+			x: 5.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "203F5AC3954217D2"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "014E3E9F08FCE1B4"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				entity: "alexsmobs:terrapin"
+				id: "6EFE45C0E3988AD4"
+				title: "Kill a Terrapin"
+				type: "kill"
+				value: 1L
+			}]
+			x: -2.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "6F0A66E22A34B56F"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "70EF71E15102F92C"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				entity: "alexsmobs:tiger"
+				id: "6E215C49EB076881"
+				title: "Kill a Tiger"
+				type: "kill"
+				value: 1L
+			}]
+			x: -1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "67009395B44E16ED"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "23528DEDE1535E67"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				entity: "alexsmobs:toucan"
+				id: "7906BDB3E3E23DFC"
+				title: "Kill a Toucan"
+				type: "kill"
+				value: 1L
+			}]
+			x: -0.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "44F087432861A620"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "5BD227B0F480D56E"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				entity: "alexsmobs:triops"
+				id: "7A4FBD07B8A8EED5"
+				title: "Kill a Triops"
+				type: "kill"
+				value: 1L
+			}]
+			x: 0.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "00DEBDBE6D7BAF1B"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "6CE8B6B6625B7A40"
+					type: "xp"
+					xp: 10
+				}
+				{
+					count: 4
+					id: "7F80D6633E12F9EF"
+					item: "minecraft:porkchop"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "alexsmobs:tusklin"
+				id: "7D4081779D7BBFD6"
+				title: "Kill a Tusklin"
+				type: "kill"
+				value: 1L
+			}]
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["13E39EE147F3A618"]
+			id: "64EECF6FD963979E"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "0AFDC1C922C02270"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				entity: "alexsmobs:underminer"
+				id: "749C5E8A281C131F"
+				title: "Kill an Underminer"
+				type: "kill"
+				value: 1L
+			}]
+			x: 2.5d
+			y: 0.0d
+		}
+	]
+	title: "Overworld"
+}

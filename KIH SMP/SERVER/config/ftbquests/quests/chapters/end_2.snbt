@@ -1,0 +1,412 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "end_2"
+	group: "0AE5CAEAEA9F972D"
+	icon: {
+		Count: 1b
+		id: "ftbquests:custom_icon"
+		tag: {
+			Icon: "alexsmobs:item/enderiophage_rocket"
+		}
+	}
+	id: "6EA362357DC00663"
+	order_index: 2
+	quest_links: [{
+		id: "69B7B53242F27B0B"
+		linked_quest: "133696D3887F1B9D"
+		x: 0.0d
+		y: -4.0d
+	}]
+	quests: [
+		{
+			dependencies: ["133696D3887F1B9D"]
+			id: "20F6B948FE491BD5"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "191CCAFCD44B072D"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				icon: {
+					Count: 1b
+					id: "ftbquests:custom_icon"
+					tag: {
+						Icon: "alexsmobs:item/enderiophage_rocket"
+					}
+				}
+				id: "0E0A7B661C0F9772"
+				observe_type: 5
+				timer: 0L
+				title: "See an Enderiophage"
+				to_observe: "alexsmobs:enderiophage"
+				type: "observation"
+			}]
+			x: 0.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["133696D3887F1B9D"]
+			id: "09C5047D4A33A432"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "0DC9457089A9EDCF"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				icon: "alexsmobs:spawn_egg_endergrade"
+				id: "333DBE4EA257E5A8"
+				observe_type: 5
+				timer: 0L
+				title: "See an Endergrade"
+				to_observe: "alexsmobs:endergrade"
+				type: "observation"
+			}]
+			x: -1.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["133696D3887F1B9D"]
+			id: "5DCB5A07D16BC9C1"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "5B9A3563B7441519"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				icon: {
+					Count: 1b
+					id: "ftbquests:custom_icon"
+					tag: {
+						Icon: "alexsmobs:item/cosmic_cod_bucket"
+					}
+				}
+				id: "04E4594F1507CDB1"
+				observe_type: 5
+				timer: 0L
+				title: "See a Cosmic Cod"
+				to_observe: "alexsmobs:cosmic_cod"
+				type: "observation"
+			}]
+			x: -3.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["133696D3887F1B9D"]
+			id: "36C9BBC68A6B9579"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "643C8769042F1026"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				icon: "alexsmobs:spawn_egg_cosmaw"
+				id: "33AED8378EFE3C93"
+				observe_type: 5
+				timer: 0L
+				title: "See a Cosmaw"
+				to_observe: "alexsmobs:cosmaw"
+				type: "observation"
+			}]
+			x: -4.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["133696D3887F1B9D"]
+			id: "694B7F3EA0C4D976"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "0FEBC36260AEC6D0"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				icon: {
+					Count: 1b
+					id: "ftbquests:custom_icon"
+					tag: {
+						Icon: "alexsmobs:item/mimicream"
+					}
+				}
+				id: "3C2281BF32EF5E3F"
+				observe_type: 5
+				timer: 0L
+				title: "See a Mimicube"
+				to_observe: "alexsmobs:mimicube"
+				type: "observation"
+			}]
+			x: 1.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["133696D3887F1B9D"]
+			id: "60998761FC588A81"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "1912E5B965C3CD84"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				icon: {
+					Count: 1b
+					id: "ftbquests:custom_icon"
+					tag: {
+						Icon: "alexsmobs:textures/entity/spectre_glint.png"
+					}
+				}
+				id: "3C861EF4C699355F"
+				observe_type: 5
+				timer: 0L
+				title: "See a Spectre"
+				to_observe: "alexsmobs:spectre"
+				type: "observation"
+			}]
+			x: 3.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["133696D3887F1B9D"]
+			id: "0157B27A35938C98"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "223919F77F734708"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				icon: {
+					Count: 1b
+					id: "ftbquests:custom_icon"
+					tag: {
+						Icon: "alexsmobs:item/void_worm_eye"
+					}
+				}
+				id: "53D99021F1FFF055"
+				observe_type: 5
+				timer: 0L
+				title: "See a Void Worm"
+				to_observe: "alexsmobs:void_worm"
+				type: "observation"
+			}]
+			x: 4.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["36C9BBC68A6B9579"]
+			id: "526490BB83F02D62"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "412CB85E8F41788E"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "1C4C569425564EAE"
+					item: "minecraft:chorus_fruit"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "alexsmobs:cosmaw"
+				icon: "alexsmobs:spawn_egg_cosmaw"
+				id: "5E327D1519196227"
+				title: "Kill a Cosmaw"
+				type: "kill"
+				value: 1L
+			}]
+			x: -4.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5DCB5A07D16BC9C1"]
+			id: "63A9B8A4C4B1DEE9"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "0B904114767D98E6"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "00B4D2D0503D46B6"
+					item: "alexsmobs:cosmic_cod"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "alexsmobs:cosmic_cod"
+				icon: {
+					Count: 1b
+					id: "ftbquests:custom_icon"
+					tag: {
+						Icon: "alexsmobs:item/cosmic_cod"
+					}
+				}
+				id: "5D1DA5619987822A"
+				title: "Kill a Cosmic Cod"
+				type: "kill"
+				value: 1L
+			}]
+			x: -3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["09C5047D4A33A432"]
+			id: "51D887358D66BA96"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "5CD49643262743B1"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				entity: "alexsmobs:endergrade"
+				icon: "alexsmobs:spawn_egg_endergrade"
+				id: "6F8773D96279A72C"
+				title: "Kill a Endergrade"
+				type: "kill"
+				value: 1L
+			}]
+			x: -1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["20F6B948FE491BD5"]
+			id: "2DB25A99F12BA0CC"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "1498581F71FB29CD"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "0F280E8934A0E71F"
+					item: "alexsmobs:capsid"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "alexsmobs:enderiophage"
+				icon: {
+					Count: 1b
+					id: "ftbquests:custom_icon"
+					tag: {
+						Icon: "alexsmobs:item/enderiophage_rocket"
+					}
+				}
+				id: "05854896D48B9282"
+				title: "Kill a Enderiophage"
+				type: "kill"
+				value: 1L
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["694B7F3EA0C4D976"]
+			id: "06B061841D174EC3"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "406B763AB2FAB132"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "2243C8E980561ADF"
+					item: "alexsmobs:mimicream"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "alexsmobs:mimicube"
+				icon: {
+					Count: 1b
+					id: "ftbquests:custom_icon"
+					tag: {
+						Icon: "alexsmobs:item/mimicream"
+					}
+				}
+				id: "5D0F81B2904B277A"
+				title: "Kill a Mimicube"
+				type: "kill"
+				value: 1L
+			}]
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["60998761FC588A81"]
+			id: "378B06580DFA60D4"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "62B46615ABB412BA"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				entity: "alexsmobs:spectre"
+				icon: {
+					Count: 1b
+					id: "ftbquests:custom_icon"
+					tag: {
+						Icon: "alexsmobs:textures/entity/spectre_glint.png"
+					}
+				}
+				id: "1DD7E35530DA16D9"
+				title: "Kill a spectre"
+				type: "kill"
+				value: 1L
+			}]
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0157B27A35938C98"]
+			id: "76EF0086A2A28617"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "5A9173E82134C4EF"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "474850153D499F84"
+					item: "alexsmobs:void_worm_eye"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "38091708A248962E"
+					item: "alexsmobs:void_worm_mandible"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "alexsmobs:void_worm"
+				icon: {
+					Count: 1b
+					id: "ftbquests:custom_icon"
+					tag: {
+						Icon: "alexsmobs:item/void_worm_mandible"
+					}
+				}
+				id: "17175658DB0F0A45"
+				title: "Kill a Void Worm"
+				type: "kill"
+				value: 1L
+			}]
+			x: 4.5d
+			y: 0.0d
+		}
+	]
+	title: "End"
+}

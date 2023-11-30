@@ -1,118 +1,323 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
+import Image from "next/image";
+import { useState, useEffect } from "react";
+import { Inter } from "next/font/google";
 
-const inter = Inter({ subsets: ['latin'] })
+// If loading a variable font, you don't need to specify the font weight
+const inter = Inter({ subsets: ["latin"] });
+
+const LoadingText = ({ totalSeconds, barLength }) => {
+  const [progress, setProgress] = useState(0);
+  const [eta, setEta] = useState(totalSeconds);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setProgress((prevProgress) =>
+        prevProgress < 100 ? prevProgress + 100 / totalSeconds : prevProgress,
+      );
+    }, 1000);
+
+    // Update the ETA every second
+    const etaInterval = setInterval(() => {
+      setEta((prevEta) => (prevEta > 0 ? prevEta - 1 : 0));
+    }, 1000);
+
+    // Clear intervals after totalSeconds
+    setTimeout(() => {
+      clearInterval(interval);
+      clearInterval(etaInterval);
+    }, totalSeconds * 1000);
+
+    return () => {
+      clearInterval(interval);
+      clearInterval(etaInterval);
+    };
+  }, [totalSeconds]);
+
+  const calculateShade = () => {
+    const percentage = Math.floor(progress);
+    if (percentage < 25) return "░"; // Light Shade
+    if (percentage < 50) return "▒"; // Medium Shade
+    if (percentage < 75) return "▓"; // Dark Shade
+    return "█"; // Full Shade
+  };
+
+  const progressBar = Array.from({ length: barLength }, (_, index) => {
+    const filled = index * (100 / barLength) < progress;
+    return filled ? calculateShade() : " ";
+  }).join("");
+
+  return (
+    <span className="text-2xl flex">
+      <p>{progressBar}</p>
+    </span>
+  );
+};
+
+const AnimatedPeriods = () => {
+  const [periods, setPeriods] = useState("");
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setPeriods((prevPeriods) => {
+        if (prevPeriods === "") return ".";
+        if (prevPeriods === ".") return "..";
+        if (prevPeriods === "..") return "...";
+        if (prevPeriods === "...") return "";
+        return "...";
+      });
+    }, 500);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
+  return <>{periods}</>;
+};
 
 export default function Home() {
+  const [online, setOnline] = useState(false);
+  const [starting, setStarting] = useState(false);
+  const [stopping, setStopping] = useState(false);
+  const [serverStatus, setServerStatus] = useState(null);
+  const [ip, setIp] = useState(null);
+
+  useEffect(() => {
+    // Fetch Status from /api/status
+    fetch("/api/status")
+      .then((res) => res.json())
+      .then((data) => {
+        setServerStatus(data.status);
+        if (data.status === "online") {
+          setOnline(true);
+          setTimeout(async () => {
+            await fetch("/api/ip").then((res) => res.json()).then((data) => {
+              
+                setIp(data.ip);
+              
+            });
+            }, 4000);
+        } else if (data.status === "starting") {
+          setOnline(false);
+          setStarting(true);
+        } else if (data.status === "stopping") {
+          setOnline(false);
+          setStopping(true);
+        } else if (data.status === "offline") {
+          setOnline(false);
+        }
+      });
+  }, []);
+
+  const handleStartUp = () => {
+    setStarting(true);
+    fetch("/api/start");
+    setTimeout(() => {
+      fetch("/api/status")
+        .then((res) => res.json())
+        .then((data) => {
+          setServerStatus(data.status);
+          if (data.status === "online") {
+            setOnline(true);
+            setStarting(false);
+              setTimeout(async () => {
+              await fetch("/api/ip").then((res) => res.json()).then((data) => {
+                
+                  setIp(data.ip);
+                
+              });
+              }, 4000);
+          }
+        });
+    }, 23000);
+  };
+
+  const handleStop = () => {
+    setStopping(true);
+    fetch("/api/stop");
+    setOnline(false);
+    setTimeout(() => {
+      setStopping(false);
+      fetch("/api/status")
+        .then((res) => res.json())
+        .then((data) => {
+          setServerStatus(data.status);
+          setOnline(false);
+          setStopping(false);
+        });
+
+    }, 7000);
+  };
+
   return (
-    <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
-    >
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">pages/index.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
+    <>
+      <main
+        className={`min-h-screen text-white bg-black bg-opacity-80 font-minecraft tracking-wide min-[1000px]:p-32 p-16`}
+      >
+        <div className="flex items-center gap-5 relative w-fit">
+          <div className="text-5xl font-bold relative">
+            <span className="z-20 relative select-none">kih gamers</span>
+            <div className="text-5xl font-bold absolute z-10 top-2 text-neutral-700 whitespace-nowrap select-none">
+              kih gamers
+            </div>
+          </div>
+          <Image
+            src="/sparkles.gif"
+            alt="Sparkles"
+            width={50}
+            height={50}
+            className="absolute right-[-32px] top-[-16px] select-none z-[30]"
+          />
+        </div>
+        <div className="mt-12 text-3xl whitespace-nowrap">
+          <span className="select-none">Status:</span>{" "}
+          {online ? (
+            <span className="text-green-500 font-bold">ONLINE</span>
+          ) : starting ? (
+            <span className="text-neutral-500 font-bold">
+              STARTING
+              <AnimatedPeriods />
+            </span>
+          ) : stopping ? (
+            <span className="text-neutral-500 font-bold">
+              STOPPING
+              <AnimatedPeriods />
+            </span>
+          ) : (
+            <span className="text-red-500 font-bold">OFFLINE</span>
+          )}
+          <br />
+          <br />
+          <span className="text-neutral-300 select-none">
+            Minecraft Version:
+          </span>{" "}
+          <span className="text-neutral-500">Java 1.20.1</span> <br />
+          <span className="text-neutral-300 select-none">Mod Loader:</span>{" "}
+          <span className="text-neutral-500">Forge 47.2.0</span> <br />
+          <span className="text-neutral-300 select-none">Modpack:</span>{" "}
           <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
+            className="text-blue-500 underline decoration-[2.5px]"
+            href="https://www.curseforge.com/minecraft/modpacks/create-perfect-world"
             target="_blank"
             rel="noopener noreferrer"
           >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+            create-perfect-world
+          </a>{" "}
+          <br />
         </div>
-      </div>
+        <div className="flex gap-5 w-fit mt-12">
+          <div className="border-4 bg-black border-neutral-500 p-4 w-[384px] h-[72px]">
+            {online ? (
+              ip ? (
+                <span className="text-2xl">{ip.replace("tcp://", "")}</span>
+              ) : (
+                <span className="text-2xl italic text-neutral-500">
+                  Fetching IP<AnimatedPeriods />
+                </span>
+              )
+              
+            ) : starting ? (
+              <span className="w-full flex justify-start">
+                <LoadingText totalSeconds={23} barLength={17} />
+              </span>
+            ) : stopping ? (
+              <span className="w-full flex justify-start">
+                <LoadingText totalSeconds={7} barLength={17} />
+              </span>
+            ) : (
+              <span className="italic text-neutral-500 text-2xl">
+                Server is not online<AnimatedPeriods />
+              </span>
+            )}
+          </div>
+        </div>
+        <div className="mt-12 flex gap-5 flex-wrap">
+          {online ? (
+            <div className="border-[6px] border-black hover:cursor-not-allowed">
+              <button className="bg-green-600 w-[171px] px-12 py-4 text-3xl border-green-800 border-b-[8px] pt-[20px] hover:cursor-not-allowed opacity-30 select-none">
+                Start
+              </button>
+            </div>
+          ) : starting ? (
+            <div className="border-[6px] border-black hover:cursor-not-allowed">
+              <button className="bg-green-600 w-[171px] px-12 py-4 text-3xl border-green-800 border-b-[8px] pt-[20px] hover:cursor-not-allowed opacity-30 select-none">
+                Start
+              </button>
+            </div>
+          ) : stopping ? (
+            <div className="border-[6px] border-black hover:cursor-not-allowed">
+              <button className="bg-green-600 w-[171px] px-12 py-4 text-3xl border-green-800 border-b-[8px] pt-[20px] hover:cursor-not-allowed opacity-30 select-none">
+                Start
+              </button>
+            </div>
+          ) : serverStatus ? (
+            <div className="border-[6px] border-black active:border-white">
+              <button
+                className="bg-green-600 w-[171px] px-12 py-4 text-3xl border-b-[12px] border-green-800 hover:border-b-[8px] hover:pt-[20px] active:bg-green-500 duration-[0.05s] select-none"
+                onClick={handleStartUp}
+              >
+                Start
+              </button>
+            </div>
+          ) : (
+            <div className="border-[6px] border-black hover:cursor-not-allowed">
+              <button className="bg-green-600 w-[171px] px-12 py-4 text-3xl border-green-800 border-b-[8px] pt-[20px] hover:cursor-not-allowed opacity-30 select-none">
+                Start
+              </button>
+            </div>
+          )}
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700/10 after:dark:from-sky-900 after:dark:via-[#0141ff]/40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
+          {online ? (
+            <div className="border-[6px] border-black active:border-white">
+              <button
+                className="bg-red-600 w-[171px] px-12 py-4 text-3xl border-b-[12px] border-red-800 hover:border-b-[8px] hover:pt-[20px] active:bg-red-500 duration-[0.05s] select-none"
+                onClick={handleStop}
+              >
+                Stop
+              </button>
+            </div>
+          ) : stopping ? (
+            <div className="border-[6px] border-black hover:cursor-not-allowed">
+              <button
+                disabled
+                className="bg-red-600 w-[171px] px-12 py-4 text-3xl border-b-[8px] pt-[20px] border-red-800 hover:cursor-not-allowed opacity-30 select-none"
+              >
+                Stop
+              </button>
+            </div>
+          ) : starting ? (
+            <div className="border-[6px] border-black hover:cursor-not-allowed">
+              <button
+                disabled
+                className="bg-red-600 w-[171px] px-12 py-4 text-3xl border-b-[8px] pt-[20px] border-red-800 hover:cursor-not-allowed opacity-30 select-none"
+              >
+                Stop
+              </button>
+            </div>
+          ) : (
+            <div className="border-[6px] border-black hover:cursor-not-allowed">
+              <button
+                disabled
+                className="bg-red-600 w-[171px] px-12 py-4 text-3xl border-b-[8px] pt-[20px] border-red-800 hover:cursor-not-allowed opacity-30 select-none"
+              >
+                Stop
+              </button>
+            </div>
+          )}
+        </div>
+        <div className="bg-black"></div>
+        <div>
+          <div className="mt-12 text-2xl">
+            <span className="text-neutral-500">
+              <span className="text-neutral-400">&#60;/&#62;</span> with{" "}
+              <span className="text-neutral-400">&#60;3</span> by{" "}
+              <span className="text-neutral-400">@not.manu.</span>
             </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Discover and deploy boilerplate example Next.js&nbsp;projects.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+          </div>
+        </div>
+      </main>
+      <footer className="absolute bottom-0 left-0 right-0 text-center text-neutral-500 text-2xl">
+      </footer>
+    </>
+  );
 }

@@ -1,0 +1,16 @@
+{
+	id: "436E1E4EDDC89767"
+	loot_size: 1
+	order_index: 0
+	rewards: [
+		{ item: "minecraft:oak_log" }
+		{ item: "minecraft:birch_log" }
+		{ item: "minecraft:spruce_log" }
+		{ item: "minecraft:jungle_log" }
+		{ item: "minecraft:acacia_log" }
+		{ item: "minecraft:dark_oak_log" }
+		{ item: "minecraft:mangrove_log" }
+		{ item: "minecraft:cherry_log" }
+	]
+	title: "Logs"
+}

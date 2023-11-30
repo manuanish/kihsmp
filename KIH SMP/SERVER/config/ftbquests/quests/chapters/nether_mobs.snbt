@@ -1,0 +1,532 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "nether_mobs"
+	group: "59F6A6B40F15A816"
+	icon: "minecraft:piglin_head"
+	id: "1BCB7D9E2E584483"
+	order_index: 3
+	quest_links: [{
+		id: "387447A5275FF9FB"
+		linked_quest: "27B28A53F0EFE604"
+		x: 0.0d
+		y: 1.0d
+	}]
+	quests: [
+		{
+			dependencies: ["27B28A53F0EFE604"]
+			id: "2BD2110E7FF86C58"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "35BB07526E01092C"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "143092D47224A1AE"
+					item: "minecraft:gold_ingot"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "minecraft:piglin"
+				id: "1413157D0BF9C81D"
+				type: "kill"
+				value: 1L
+			}]
+			x: 0.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["27B28A53F0EFE604"]
+			id: "3327AB602053C9C2"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "4D3FD261A50720D2"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "7005D12FB909A417"
+					item: "minecraft:blaze_rod"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "minecraft:blaze"
+				id: "3A641D43ECF48A3F"
+				type: "kill"
+				value: 1L
+			}]
+			x: -3.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["27B28A53F0EFE604"]
+			id: "35690A45EBABBF79"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "10F82430A539BB3F"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "34D42B055FAAC0DA"
+					item: "minecraft:bone"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "minecraft:wither_skeleton"
+				id: "7B8C7BD5AC8C8623"
+				type: "kill"
+				value: 1L
+			}]
+			x: 1.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["27B28A53F0EFE604"]
+			id: "686953790C543AD8"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "3CDA689550E457E6"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "47AC95892336AD74"
+					item: "minecraft:gold_ingot"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "minecraft:zombified_piglin"
+				id: "7B2CB29F48C08A97"
+				type: "kill"
+				value: 1L
+			}]
+			x: 3.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["27B28A53F0EFE604"]
+			id: "7D066BD1F3C83227"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "13671B442FAC51B9"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "4AB1D6F5DF4B6F8F"
+					item: "minecraft:cooked_porkchop"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "minecraft:hoglin"
+				id: "4F3278BB657499C1"
+				type: "kill"
+				value: 1L
+			}]
+			x: -1.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["3327AB602053C9C2"]
+			id: "350DC2EFAAAE8C39"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "259F84C36676CF96"
+					type: "xp"
+					xp: 10
+				}
+				{
+					count: 2
+					id: "64E8C8F8EE0DFD8E"
+					item: "minecraft:blaze_rod"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "minecraft:blaze"
+				id: "636A807AAEB018A1"
+				type: "kill"
+				value: 5L
+			}]
+			x: -3.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["350DC2EFAAAE8C39"]
+			id: "3C7430A05A2A4489"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "71BD6A59A303B5F0"
+					type: "xp"
+					xp: 10
+				}
+				{
+					count: 3
+					id: "31F76A73C89812D0"
+					item: "minecraft:blaze_rod"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "minecraft:blaze"
+				id: "54CEB2EE4B595B2A"
+				type: "kill"
+				value: 10L
+			}]
+			x: -3.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["3C7430A05A2A4489"]
+			id: "3170CB15A0CA5E3A"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "37F95AED894D6AE9"
+					type: "xp"
+					xp: 10
+				}
+				{
+					count: 5
+					id: "11546293C15B600C"
+					item: "minecraft:blaze_rod"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "minecraft:blaze"
+				id: "37A004E1619E2D0C"
+				type: "kill"
+				value: 25L
+			}]
+			x: -3.0d
+			y: -6.0d
+		}
+		{
+			dependencies: ["7D066BD1F3C83227"]
+			id: "0E2E461EE580B3A3"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "1B939F5799F263E5"
+					type: "xp"
+					xp: 10
+				}
+				{
+					count: 2
+					id: "44B4DA8E6DFD987C"
+					item: "minecraft:cooked_porkchop"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "minecraft:hoglin"
+				id: "5087DA4449B28A0D"
+				type: "kill"
+				value: 5L
+			}]
+			x: -1.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["0E2E461EE580B3A3"]
+			id: "05F52904BDABBC73"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "0B347ECF8DBF130C"
+					type: "xp"
+					xp: 10
+				}
+				{
+					count: 3
+					id: "0D7721E947C2BB05"
+					item: "minecraft:cooked_porkchop"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "minecraft:hoglin"
+				id: "29F9389B8A794B1E"
+				type: "kill"
+				value: 10L
+			}]
+			x: -1.5d
+			y: -4.5d
+		}
+		{
+			dependencies: ["05F52904BDABBC73"]
+			id: "673B8A746A4DC098"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "66644178F4187B60"
+					type: "xp"
+					xp: 10
+				}
+				{
+					count: 5
+					id: "15A88D57BEE69D2C"
+					item: "minecraft:cooked_porkchop"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "minecraft:hoglin"
+				id: "6F4258D14BF02DDF"
+				type: "kill"
+				value: 25L
+			}]
+			x: -1.5d
+			y: -6.0d
+		}
+		{
+			dependencies: ["2BD2110E7FF86C58"]
+			id: "1BB716B5472D20AF"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "285753BAEF0FD073"
+					type: "xp"
+					xp: 10
+				}
+				{
+					count: 2
+					id: "235C9770E90CED30"
+					item: "minecraft:gold_ingot"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "minecraft:piglin"
+				id: "07FD621AA75225F9"
+				type: "kill"
+				value: 5L
+			}]
+			x: 0.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["1BB716B5472D20AF"]
+			id: "27BDD56AE737D583"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "2F22D4CDA16407A4"
+					type: "xp"
+					xp: 10
+				}
+				{
+					count: 3
+					id: "6328EB752DC5B5F5"
+					item: "minecraft:gold_ingot"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "minecraft:piglin"
+				id: "6D4F5565BE724302"
+				type: "kill"
+				value: 10L
+			}]
+			x: 0.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["27BDD56AE737D583"]
+			id: "0C96FA4BDEBE4C98"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "413CB8E65E8F0D5C"
+					type: "xp"
+					xp: 10
+				}
+				{
+					count: 5
+					id: "329BE24CAF13AE56"
+					item: "minecraft:gold_ingot"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "minecraft:piglin"
+				id: "3D23855B7EE955B5"
+				type: "kill"
+				value: 25L
+			}]
+			x: 0.0d
+			y: -6.0d
+		}
+		{
+			dependencies: ["35690A45EBABBF79"]
+			id: "33F8CA10AC8958D5"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "53A73DA91A0ECE3F"
+					type: "xp"
+					xp: 10
+				}
+				{
+					count: 2
+					id: "5AE66CF4A8E803B7"
+					item: "minecraft:bone"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "minecraft:wither_skeleton"
+				id: "652199465E86D6DF"
+				type: "kill"
+				value: 5L
+			}]
+			x: 1.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["33F8CA10AC8958D5"]
+			id: "3B42947A6C010175"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "24086A14962528E1"
+					type: "xp"
+					xp: 10
+				}
+				{
+					count: 3
+					id: "26E2BA0225BD59F8"
+					item: "minecraft:bone"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "minecraft:wither_skeleton"
+				id: "3AF80335ADD55E85"
+				type: "kill"
+				value: 10L
+			}]
+			x: 1.5d
+			y: -4.5d
+		}
+		{
+			dependencies: ["3B42947A6C010175"]
+			id: "136C3A938B197D0E"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "5E495AC1B968E884"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "2413928C5551EAAE"
+					item: "minecraft:wither_skeleton_skull"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "minecraft:wither_skeleton"
+				id: "3788D68BD9564A38"
+				type: "kill"
+				value: 25L
+			}]
+			x: 1.5d
+			y: -6.0d
+		}
+		{
+			dependencies: ["686953790C543AD8"]
+			id: "220D19C624F0FD3B"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "36F57AF250575C1E"
+					type: "xp"
+					xp: 10
+				}
+				{
+					count: 2
+					id: "2D02803AB5C1BFE2"
+					item: "minecraft:gold_ingot"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "minecraft:zombified_piglin"
+				id: "12DCCAF83CE6B566"
+				type: "kill"
+				value: 5L
+			}]
+			x: 3.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["220D19C624F0FD3B"]
+			id: "3574A366144E6403"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "28E71D7A0D62F276"
+					type: "xp"
+					xp: 10
+				}
+				{
+					count: 3
+					id: "59FB439D9249771A"
+					item: "minecraft:gold_ingot"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "minecraft:zombified_piglin"
+				id: "46A9B9A15FF418F5"
+				type: "kill"
+				value: 10L
+			}]
+			x: 3.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["3574A366144E6403"]
+			id: "6D5F521795EE640A"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "730976E42AEA9E13"
+					type: "xp"
+					xp: 10
+				}
+				{
+					count: 5
+					id: "71B41D4BF188836D"
+					item: "minecraft:gold_ingot"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "minecraft:zombified_piglin"
+				id: "2B4ED4A9D0996F5D"
+				type: "kill"
+				value: 25L
+			}]
+			x: 3.0d
+			y: -6.0d
+		}
+	]
+	title: "Nether Mobs"
+}

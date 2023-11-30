@@ -1,0 +1,93 @@
+
+["Entity settings"]
+	#Adapt entity speed to tps, makes entities struggle less with lag. default = true
+	adaptiveSpeed = true
+	#Fix leash lag from entities on a leash, default = true
+	fixLeash = true
+	#Enables improved entity collision and movement calculations for any non item entity, default = true
+	fastCollisions = true
+	#Enables less laggy entity item pickup, default = true
+	noLagItemPickup = true
+	#Enable fast inventory advancement triggers, many advancements based on items tend to lag the players, default = true
+	fastInventoryAdvancement = true
+	#Enable multithreaded movement for entities, requires fastCollisions to be enabled. default = true
+	multiEntities = true
+	#List of entities excluded from multithreaded movement. format :  ["minecraft:zombie", "minecraft:creeper"]
+	excludedThreadedMovement = []
+	#Disables block changes notifying all entity paths in the world, to possibly adjust their paths, disable with Immersive Engineering, incompat, default = true
+	disableNotifyOnBlockChange = true
+	#Slower updating of armor stands, default = true
+	slowArmorStands = true
+	#Enables dynamic entity rendering, stops non-visible entities from beeing rendered but can sometimes cause a slight phasing-in delay. Usually a large boost to fps, default = true. Require restart
+	enableDynamicEntityRendering = true
+	#List of entities excluded from beeing affected by dynamic entity rendering, by entity ID: e.g. format :  ["minecraft:zombie", "minecraft:creeper"]
+	excludedRenderHidingMobs = []
+	#Should entities with glowing effect always be rendered?. default = true
+	alwaysglow = true
+	#Enables dynamic update distance, it will reduces entity updates when far away from the player, respecting the entities own update range. default = true. Requires restart
+	enableDynamicEntityUpdates = true
+	#Entity dynamic update distance setting, reduces the entities own update range from players at which entities get slowed down, in chunks(16blocks). The higher you set this, the closer to the player entities will get slower updates. Default = 0
+	#Range: 0 ~ 1000
+	entityUpdateDistanceReduction = 0
+	#List of entities excluded from beeing affected by dynamic entity updates: e.g. format :  ["minecraft:zombie", "minecraft:creeper"]
+	excludedTickDistanceMobs = []
+
+["Entity AI Settings"]
+	#This section is about specific settings and tickrates for AI goals. Ticks happen 20 times a second when at 20 TPS.
+	#Sets the tick interval in which non-running AI tasks are rechecked. Vanilla default is 1(starting with 1.13+), this mods suggested default is 4(as it was in vanilla 1.12)
+	#Range: 1 ~ 500
+	goalselectorrate = 4
+	#Enables a slower updated AI avoid entity goal, avoid is used e.g. for villagers avoiding zombies so it constantly searches for mobs in the area. default = true
+	optimizeAvoid = true
+	#Enables a slower updated AI Panic entity goal, panic is used for chickens/other animals running away e.g. on fire. default = true
+	optimizePanic = true
+	#Enables a slower updated AI Breed entity goal, breed is used for searching nearby similar animals and doesnt have to be checked that often. default = true
+	optimizeBreed = true
+	#Enables a slower updated AI Fox find shelter goal, which causes too much load. default = true
+	slowFindShelter = true
+	#Fix chunkloading and lag caused by the block break goal, mostly used by zombies or endermen. default = true
+	fixBlockBreakGoal = true
+
+["Entity AI Load balancing settings"]
+	#Enables load balancing for entity AI, this checks for lagging AI's and pauses them when they lag too much. default = true
+	AILoadBalancing = true
+	#Mean tick time at which AI load balancing takes effect, 1000 / mean tick time = TPS. default: 55
+	#Range: 1 ~ 200
+	meanTickAITH = 55
+	#Whether to debug lagging entities and log offenders, requires load balancing to be enabled. default = true
+	logEntityAILag = true
+
+["Entity spawn settings"]
+	#Entity spawn interval setting, determines how frequently entities are spawned overall. 1 = Vanilla default, default = 10
+	#Range: 1 ~ 1000
+	spawnInterval = 10
+	#List of mobs disallowed from spawning: e.g. format :  ["minecraft:zombie", "minecraft:creeper"]
+	forbiddenMobs = []
+
+["General performance improvements settings"]
+	#Enables fast itemstack comparisons
+	fastItemCompare = true
+	#Enable fast chunk block ticks, reduces lag on random block ticks in the world but keeps the same growth e.g. on crops. default = true
+	fastChunkBlocks = true
+	#Set how many scheduled blocks are updated each tick, scheduled block updates are for example fluid flowing. default = 1000, vanilla default = 65536
+	#Range: 1 ~ 65536
+	blockTicks = 1000
+	#Enables hopper improvements to reduce their lag, default = true
+	fasterHoppers = true
+	#Set the maximum allowed amount of times the same sounds is allowed to play at once. Lowers e.g. lag of flowing water and other cases where a sound is repeated a lot at once. Default = 10
+	#Range: 1 ~ 4000
+	maxSameSounds = 10
+
+["Utility settings, debugging and other"]
+	#List of automated command ID's forbidden from executing (usually used by datapacks/some mods in mcfunctions) : e.g. format :  ["nullscape:clocks/main", "nullscape:clocks/main"]
+	forbiddenCommands = []
+	#Set the watchdog timeout for the integrated server(singleplayer) in miliseconds, -1 Disables it. 1 second = 1000 miliseconds, default = 180000
+	#Range: -1 ~ 500000
+	singlePlayerWatchDogTimeout = 180000
+	#Disables the config reload/file watching during the game, can cause performance issues on some linux systems, default = false
+	disableConfigReload = false
+	#Enable printing of world/chunk saves for debugging purposes, those normally happen every 5minutes. default = false
+	printWorldSaves = false
+	#Enable various debugging error logs, like chunkloading etc. , default = false
+	debugOptionsEnabled = false
+

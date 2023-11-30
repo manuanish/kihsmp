@@ -1,0 +1,16 @@
+{
+	id: "4FA4A0C500AA9DBA"
+	loot_size: 1
+	order_index: 1
+	rewards: [
+		{ count: 4, item: "minecraft:oak_planks" }
+		{ count: 4, item: "minecraft:birch_planks" }
+		{ count: 4, item: "minecraft:spruce_planks" }
+		{ count: 4, item: "minecraft:jungle_planks" }
+		{ count: 4, item: "minecraft:acacia_planks" }
+		{ count: 4, item: "minecraft:dark_oak_planks" }
+		{ count: 4, item: "minecraft:mangrove_planks" }
+		{ count: 4, item: "minecraft:cherry_planks" }
+	]
+	title: "Planks"
+}

@@ -1,0 +1,476 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "nether_2"
+	group: "0AE5CAEAEA9F972D"
+	icon: {
+		Count: 1b
+		id: "ftbquests:custom_icon"
+		tag: {
+			Icon: "alexsmobs:item/blood_sac"
+		}
+	}
+	id: "0110D8011BD7DB63"
+	order_index: 1
+	quest_links: [{
+		id: "0E1C27672E602416"
+		linked_quest: "27B28A53F0EFE604"
+		x: 0.0d
+		y: -4.0d
+	}]
+	quests: [
+		{
+			dependencies: ["27B28A53F0EFE604"]
+			id: "45BC0BE3BEF0FFC4"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "36820DFFCC3C4522"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				icon: {
+					Count: 1b
+					id: "ftbquests:custom_icon"
+					tag: {
+						Icon: "alexsmobs:item/bone_serpent_tooth"
+					}
+				}
+				id: "360EA4E2AA02D595"
+				observe_type: 5
+				timer: 0L
+				title: "See a Bone Serpent"
+				to_observe: "alexsmobs:bone_serpent"
+				type: "observation"
+			}]
+			title: "See a Bone Serpent"
+			x: -6.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["27B28A53F0EFE604"]
+			id: "1CAA45BFB2FDA321"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "72740F146BD800EC"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				icon: {
+					Count: 1b
+					id: "ftbquests:custom_icon"
+					tag: {
+						Icon: "alexsmobs:item/straddle_saddle"
+					}
+				}
+				id: "43277C4E731922D5"
+				observe_type: 5
+				timer: 0L
+				title: "See a Laviathan"
+				to_observe: "alexsmobs:laviathan"
+				type: "observation"
+			}]
+			x: -1.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["27B28A53F0EFE604"]
+			id: "75FE17440478D990"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "7ADE3FEA80DE55AD"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				icon: {
+					Count: 1b
+					id: "ftbquests:custom_icon"
+					tag: {
+						Icon: "alexsmobs:item/bucket_content/stradpole"
+					}
+				}
+				id: "3F9B0619639D266E"
+				observe_type: 5
+				timer: 0L
+				title: "See a Stradpole"
+				to_observe: "alexsmobs:stradpole"
+				type: "observation"
+			}]
+			x: 3.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["27B28A53F0EFE604"]
+			id: "5290D7AA6BC26F8F"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "4ACE715A2733E5C9"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				icon: {
+					Count: 1b
+					id: "ftbquests:custom_icon"
+					tag: {
+						Icon: "alexsmobs:item/warped_muscle"
+					}
+				}
+				id: "51EEE2BA604C4351"
+				observe_type: 5
+				timer: 0L
+				title: "See a Warped Mosco"
+				to_observe: "alexsmobs:warped_mosco"
+				type: "observation"
+			}]
+			x: 4.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["27B28A53F0EFE604"]
+			id: "4D0D18DA9D615166"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "112F3ED13554A182"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				icon: "alexsmobs:spawn_egg_warped_toad"
+				id: "1FB82FBF69BAF1D2"
+				observe_type: 5
+				timer: 0L
+				title: "See a Warped Toad"
+				to_observe: "alexsmobs:warped_toad"
+				type: "observation"
+			}]
+			x: 6.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["27B28A53F0EFE604"]
+			id: "24CD2B5F9962BE7A"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "3078F59066AE9709"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				icon: {
+					Count: 1b
+					id: "ftbquests:custom_icon"
+					tag: {
+						Icon: "alexsmobs:item/dropbear_claw"
+					}
+				}
+				id: "1D95F7244756BF9A"
+				observe_type: 5
+				timer: 0L
+				title: "See a Dropbear"
+				to_observe: "alexsmobs:dropbear"
+				type: "observation"
+			}]
+			x: -3.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["45BC0BE3BEF0FFC4"]
+			icon: {
+				Count: 1b
+				id: "ftbquests:custom_icon"
+				tag: {
+					Icon: "alexsmobs:item/bone_serpent_tooth"
+				}
+			}
+			id: "52C9A45635695D5C"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "458444521797B278"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "1062E975CD95F9F8"
+					item: "alexsmobs:bone_serpent_tooth"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "alexsmobs:bone_serpent"
+				icon: {
+					Count: 1b
+					id: "ftbquests:custom_icon"
+					tag: {
+						Icon: "alexsmobs:item/bone_serpent_tooth"
+					}
+				}
+				id: "5475078CFE9A6473"
+				title: "Kill a Bone Serpent"
+				type: "kill"
+				value: 1L
+			}]
+			x: -6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["27B28A53F0EFE604"]
+			id: "3C63AEEA674F9271"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "13CB88E1B028015D"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "321D81CCDD9FDE39"
+					item: "alexsmobs:mosquito_proboscis"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "alexsmobs:crimson_mosquito"
+				icon: {
+					Count: 1b
+					id: "ftbquests:custom_icon"
+					tag: {
+						Icon: "alexsmobs:item/mosquito_larva"
+					}
+				}
+				id: "53C80D9DAD794578"
+				title: "Kill a Crimson Mosquito"
+				type: "kill"
+				value: 1L
+			}]
+			x: -4.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["24CD2B5F9962BE7A"]
+			id: "7D36310081A27CFE"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "0B713962D0934215"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "7AC36C6D39783D68"
+					item: "alexsmobs:dropbear_claw"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "alexsmobs:dropbear"
+				icon: {
+					Count: 1b
+					id: "ftbquests:custom_icon"
+					tag: {
+						Icon: "alexsmobs:item/dropbear_claw"
+					}
+				}
+				id: "0E65AC09C1EABF49"
+				title: "Kill a Dropbear"
+				type: "kill"
+				value: 1L
+			}]
+			x: -3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1CAA45BFB2FDA321"]
+			id: "598969681AE7464A"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "3C9BD2ED90824370"
+					type: "xp"
+					xp: 10
+				}
+				{
+					count: 2
+					id: "511C9C987DF299F2"
+					item: "minecraft:blackstone"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "47A6EB317EFADD12"
+					item: "minecraft:magma_block"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "alexsmobs:laviathan"
+				icon: {
+					Count: 1b
+					id: "ftbquests:custom_icon"
+					tag: {
+						Icon: "alexsmobs:item/straddle_helmet"
+					}
+				}
+				id: "7E3E7868F30528F5"
+				title: "Kill a Laviathan"
+				type: "kill"
+				value: 1L
+			}]
+			x: -1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["27B28A53F0EFE604"]
+			id: "53C8C66DAAA11C00"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "76F7F4A695286E42"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				entity: "alexsmobs:soul_vulture"
+				icon: "alexsmobs:spawn_egg_soul_vulture"
+				id: "3449E6DF6C339EA9"
+				title: "Kill a Soul Vulture"
+				type: "kill"
+				value: 1L
+			}]
+			x: 0.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["27B28A53F0EFE604"]
+			id: "7965D25BBFCC5A25"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "676A700AC4D55A85"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "6025AEFEB70C95FB"
+					item: "alexsmobs:straddlite"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "alexsmobs:straddler"
+				icon: {
+					Count: 1b
+					id: "ftbquests:custom_icon"
+					tag: {
+						Icon: "alexsmobs:item/straddlite"
+					}
+				}
+				id: "160801F1EC651C33"
+				title: "Kill a Stradler"
+				type: "kill"
+				value: 1L
+			}]
+			x: 1.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["75FE17440478D990"]
+			id: "31F5C17B5DDBF692"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "2502704AA3F7A4D3"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				entity: "alexsmobs:stradpole"
+				icon: {
+					Count: 1b
+					id: "ftbquests:custom_icon"
+					tag: {
+						Icon: "alexsmobs:item/bucket_content/stradpole"
+					}
+				}
+				id: "6B5D6E086437615C"
+				title: "Kill a Stradpole"
+				type: "kill"
+				value: 1L
+			}]
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5290D7AA6BC26F8F"]
+			id: "76F5425C524A06F0"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "0D4C410C43BD4C1F"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "2E27DE7CB2E4BA29"
+					item: "alexsmobs:warped_muscle"
+					type: "item"
+				}
+				{
+					id: "414D599FA303FFCE"
+					item: "alexsmobs:hemolymph_sac"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "alexsmobs:warped_mosco"
+				icon: {
+					Count: 1b
+					id: "ftbquests:custom_icon"
+					tag: {
+						Icon: "alexsmobs:item/hemolymph_sac"
+					}
+				}
+				id: "51B30C27E15FEAFE"
+				title: "Kill a Warped Mosco"
+				type: "kill"
+				value: 1L
+			}]
+			x: 4.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4D0D18DA9D615166"]
+			id: "7C8C68CE19E6DECA"
+			progression_mode: "flexible"
+			rewards: [
+				{
+					id: "7B3C8C3A5FA7ED38"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "74DA9C70F884BDBC"
+					item: "minecraft:shroomlight"
+					type: "item"
+				}
+				{
+					id: "12CB813D02D6F78C"
+					item: "minecraft:nether_wart"
+					type: "item"
+				}
+			]
+			tasks: [{
+				entity: "alexsmobs:warped_toad"
+				icon: "alexsmobs:spawn_egg_warped_toad"
+				id: "2087B9605A35468E"
+				title: "Kill a Warped Toad"
+				type: "kill"
+				value: 1L
+			}]
+			x: 6.0d
+			y: 0.0d
+		}
+	]
+	title: "Nether"
+}

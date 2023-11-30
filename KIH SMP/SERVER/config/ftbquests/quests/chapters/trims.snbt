@@ -1,0 +1,530 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "trims"
+	group: "59F6A6B40F15A816"
+	icon: "minecraft:silence_armor_trim_smithing_template"
+	id: "2BCC7D72D260A21C"
+	order_index: 6
+	quest_links: [
+		{
+			id: "533A55F43F647802"
+			linked_quest: "657FE1419444750E"
+			x: -8.0d
+			y: 5.0d
+		}
+		{
+			id: "5715CFA88322ED11"
+			linked_quest: "1AFE8D1CE55C1527"
+			x: 4.0d
+			y: 5.0d
+		}
+		{
+			id: "030948502D67BA71"
+			linked_quest: "62DE24AD061AC90F"
+			x: 8.0d
+			y: 5.0d
+		}
+		{
+			id: "1D524CAE845EA307"
+			linked_quest: "035D8D1D349F7BC3"
+			x: -4.0d
+			y: 5.0d
+		}
+		{
+			id: "5FCB1AA48E868AB8"
+			linked_quest: "5DE1DAE7AECE29FF"
+			x: 12.0d
+			y: 5.0d
+		}
+	]
+	quests: [
+		{
+			icon: {
+				Count: 1b
+				id: "ftbquests:custom_icon"
+				tag: {
+					Icon: "minecraft:item/oak_boat"
+				}
+			}
+			id: "4EA5BE7A1FC1C75E"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "1BE57FE0DA03611E"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				id: "1E97800DDB895C60"
+				structure: "minecraft:shipwreck"
+				type: "structure"
+			}]
+			title: "Locate a &bShipwreck&r"
+			x: -12.0d
+			y: -5.0d
+		}
+		{
+			dependencies: ["51E37CE8D0904957"]
+			id: "107FD0A61301E536"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "02FF354983FC1075"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				id: "3C4571C7EFEF439F"
+				item: "minecraft:sentry_armor_trim_smithing_template"
+				only_from_crafting: false
+				type: "item"
+			}]
+			title: "Obtain a &2Sentry Armour Trim&r"
+			x: -4.0d
+			y: -3.5d
+		}
+		{
+			dependencies: ["2DCA30B19B8F361F"]
+			id: "768F721251C3B072"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "46CDB3B91ECF14EF"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				id: "037A1EB6A0113EF5"
+				item: "minecraft:vex_armor_trim_smithing_template"
+				only_from_crafting: false
+				type: "item"
+			}]
+			title: "Obtain a &2Vex Armour Trim&r"
+			x: 4.0d
+			y: -3.5d
+		}
+		{
+			dependencies: ["403A0491D1B2C51E"]
+			id: "2746EDAC084A2939"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "33FFB33AD11C4C2E"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				id: "5176B16CCDB67E25"
+				item: "minecraft:wild_armor_trim_smithing_template"
+				only_from_crafting: false
+				type: "item"
+			}]
+			title: "Obtain a &2Wild Armour Trim&r"
+			x: 8.0d
+			y: -3.5d
+		}
+		{
+			dependencies: ["4EA5BE7A1FC1C75E"]
+			id: "4099378B803D8CAF"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "23C1443553C5D72E"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				id: "6417980B3E69101A"
+				item: "minecraft:coast_armor_trim_smithing_template"
+				only_from_crafting: false
+				type: "item"
+			}]
+			title: "Obtain a &bCoast Armour Trim&r"
+			x: -12.0d
+			y: -3.5d
+		}
+		{
+			dependencies: ["5F8F8BB3BF640A17"]
+			id: "36057360ADDD3B23"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "0EC007918D3D9F4E"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				id: "7E81644EF131502A"
+				item: "minecraft:dune_armor_trim_smithing_template"
+				only_from_crafting: false
+				type: "item"
+			}]
+			title: "Obtain a &eDune Armour Trim&r"
+			x: 12.0d
+			y: -3.5d
+		}
+		{
+			dependencies: ["2B6376258B2E63B4"]
+			id: "5C726D0A9F70EC89"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "6D7F312C9E461EFE"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				id: "01EB8DC4433524A5"
+				item: "minecraft:wayfinder_armor_trim_smithing_template"
+				only_from_crafting: false
+				type: "item"
+			}]
+			title: "Obtain a &2Wayfinder Armour Trim&r"
+			x: -9.5d
+			y: -3.5d
+		}
+		{
+			dependencies: ["2B6376258B2E63B4"]
+			id: "68AA8AA92432E22E"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "5C73F702A623268D"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				id: "27B929A7A35F8E19"
+				item: "minecraft:raiser_armor_trim_smithing_template"
+				only_from_crafting: false
+				type: "item"
+			}]
+			title: "Obtain a &2Raiser Armour Trim&r"
+			x: -9.5d
+			y: -6.5d
+		}
+		{
+			dependencies: ["2B6376258B2E63B4"]
+			id: "4F603085044BFAAD"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "2D3E194F7BBD5DEE"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				id: "52588591ABF81002"
+				item: "minecraft:shaper_armor_trim_smithing_template"
+				only_from_crafting: false
+				type: "item"
+			}]
+			title: "Obtain a &2Shaper Armour Trim&r"
+			x: -6.5d
+			y: -6.5d
+		}
+		{
+			dependencies: ["2B6376258B2E63B4"]
+			id: "7E023A9B6A3AEB64"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "23CBC9D95E4435A3"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				id: "111C0B06A7E8BD9A"
+				item: "minecraft:host_armor_trim_smithing_template"
+				only_from_crafting: false
+				type: "item"
+			}]
+			title: "Obtain a &2Host Armour Trim&r"
+			x: -6.5d
+			y: -3.5d
+		}
+		{
+			dependencies: ["035D8D1D349F7BC3"]
+			id: "228408168636F0BB"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "58C684AA94FF944F"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				id: "127625BC29212541"
+				item: "minecraft:ward_armor_trim_smithing_template"
+				only_from_crafting: false
+				type: "item"
+			}]
+			title: "Obtain a &6Ward Armour Trim&r"
+			x: -5.5d
+			y: 3.5d
+		}
+		{
+			dependencies: ["035D8D1D349F7BC3"]
+			id: "5C1E3564EC1DA17A"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "027F65DFEE48BE5B"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				id: "7AA99BED0CCBEC03"
+				item: "minecraft:silence_armor_trim_smithing_template"
+				only_from_crafting: false
+				type: "item"
+			}]
+			title: "Obtain a &6Silence Armour Trim&r"
+			x: -2.5d
+			y: 3.5d
+		}
+		{
+			dependencies: ["77814DAB91725098"]
+			id: "5D23961C159EA3B6"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "33019FA28475AEDD"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				id: "4EADB1371A31F4AF"
+				item: "minecraft:tide_armor_trim_smithing_template"
+				only_from_crafting: false
+				type: "item"
+			}]
+			title: "Obtain a &bTide Armour Trim&r"
+			x: -12.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["1AFE8D1CE55C1527"]
+			id: "2BE227523EDEA77E"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "2075D63B4EA50C56"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				id: "088718D10A339F17"
+				item: "minecraft:snout_armor_trim_smithing_template"
+				only_from_crafting: false
+				type: "item"
+			}]
+			title: "Obtain a &dSnout Armour Trim&r"
+			x: 4.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["62DE24AD061AC90F"]
+			id: "2707DF325C66A8E6"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "6B8287FEAAB16929"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				id: "76187122E1BA3756"
+				item: "minecraft:rib_armor_trim_smithing_template"
+				only_from_crafting: false
+				type: "item"
+			}]
+			title: "Obtain a &dRib Armour Trim&r"
+			x: 8.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["657FE1419444750E"]
+			id: "2C1E6D3769CEFC50"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "058502E341717B51"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				id: "06888E06F40E0793"
+				item: "minecraft:eye_armor_trim_smithing_template"
+				only_from_crafting: false
+				type: "item"
+			}]
+			title: "Obtain a &5Eye Armour Trim&r"
+			x: -8.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["5DE1DAE7AECE29FF"]
+			id: "53D1F8DFB89185AF"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "18F64F5697172698"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				id: "3CB1CE4CB995AA79"
+				item: "minecraft:spire_armor_trim_smithing_template"
+				only_from_crafting: false
+				type: "item"
+			}]
+			title: "Obtain a &5Spire Armour Trim&r"
+			x: 12.0d
+			y: 3.5d
+		}
+		{
+			icon: {
+				Count: 1b
+				id: "ftbquests:custom_icon"
+				tag: {
+					Icon: "minecraft:block/mossy_cobblestone"
+				}
+			}
+			id: "403A0491D1B2C51E"
+			rewards: [{
+				id: "0C3B9D92483AA9B3"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				id: "4482434378C63F50"
+				structure: "minecraft:jungle_pyramid"
+				type: "structure"
+			}]
+			title: "Locate a &2Jungle Pyramid&r"
+			x: 8.0d
+			y: -5.0d
+		}
+		{
+			icon: {
+				Count: 1b
+				id: "ftbquests:custom_icon"
+				tag: {
+					Icon: "minecraft:item/crossbow_arrow"
+				}
+			}
+			id: "51E37CE8D0904957"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "309F627A0B653EF4"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				id: "11231AACB3B9DB1B"
+				structure: "minecraft:pillager_outpost"
+				type: "structure"
+			}]
+			title: "Locate a &2Pillager Outpost&r"
+			x: -4.0d
+			y: -5.0d
+		}
+		{
+			icon: {
+				Count: 1b
+				id: "ftbquests:custom_icon"
+				tag: {
+					Icon: "minecraft:block/dark_oak_log"
+				}
+			}
+			id: "2DCA30B19B8F361F"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "24600D6916520A4B"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				id: "2894163C10F32811"
+				structure: "minecraft:mansion"
+				type: "structure"
+			}]
+			title: "Locate a &2Mansion&r"
+			x: 4.0d
+			y: -5.0d
+		}
+		{
+			icon: {
+				Count: 1b
+				id: "ftbquests:custom_icon"
+				tag: {
+					Icon: "minecraft:block/cut_sandstone"
+				}
+			}
+			id: "5F8F8BB3BF640A17"
+			rewards: [{
+				id: "6E54332FF372685B"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				id: "7DAF0AE68FA1E177"
+				structure: "minecraft:desert_pyramid"
+				type: "structure"
+			}]
+			title: "Locate a &eDesert Pyramid&r"
+			x: 12.0d
+			y: -5.0d
+		}
+		{
+			icon: {
+				Count: 1b
+				id: "ftbquests:custom_icon"
+				tag: {
+					Icon: "minecraft:block/suspicious_gravel_3"
+				}
+			}
+			id: "2B6376258B2E63B4"
+			progression_mode: "flexible"
+			rewards: [{
+				id: "6400A38C9D38346C"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				id: "3AEE0300DB201E47"
+				structure: "minecraft:trail_ruins"
+				type: "structure"
+			}]
+			title: "Locate a &2Trail Ruins"
+			x: -8.0d
+			y: -5.0d
+		}
+		{
+			icon: {
+				Count: 1b
+				id: "ftbquests:custom_icon"
+				tag: {
+					Icon: "minecraft:block/dark_prismarine"
+				}
+			}
+			id: "77814DAB91725098"
+			rewards: [{
+				id: "70E60DD8093625F6"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [{
+				id: "3376927D8B92074F"
+				structure: "minecraft:monument"
+				type: "structure"
+			}]
+			title: "Locate a &bMonument&r"
+			x: -12.0d
+			y: 5.0d
+		}
+		{
+			description: ["In this page is all of the &astructures&r that you can find each &ctrim&r at"]
+			id: "1F7F129C7C966484"
+			rewards: [{
+				id: "71EA1CDDD55B0FBB"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "All the locations"
+			tasks: [{
+				id: "3B1EF248D89AA6BA"
+				title: "Trims"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+	]
+	title: "Trims"
+}
