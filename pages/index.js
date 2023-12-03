@@ -48,7 +48,16 @@ const LoadingText = ({ totalSeconds, barLength }) => {
 
   return (
     <span className="text-2xl flex">
-      <p>{progressBar}</p>
+      {progress < 100 ? (
+        <>
+          <span className="mr-2">{progressBar}</span>
+        </>
+      ) : (
+        <span className="mr-2 italic text-neutral-500">
+          Taking longer than usual
+          <AnimatedPeriods />
+        </span>
+      )}
     </span>
   );
 };
@@ -80,80 +89,97 @@ export default function Home() {
   const [starting, setStarting] = useState(false);
   const [stopping, setStopping] = useState(false);
   const [serverStatus, setServerStatus] = useState(null);
+  const [players, setPlayers] = useState([]);
+  const [error, setError] = useState(null);
   const [ip, setIp] = useState(null);
+  const normalStartTime = 30;
+  const normalStopTime = 7;
+  const normalFetchIpTime = 2;
 
-  useEffect(() => {
-    // Fetch Status from /api/status
-    fetch("/api/status")
-      .then((res) => res.json())
-      .then((data) => {
-        setServerStatus(data.status);
-        if (data.status === "online") {
-          setOnline(true);
-          setTimeout(async () => {
-            await fetch("/api/ip").then((res) => res.json()).then((data) => {
-              
-                setIp(data.ip);
-              
-            });
-            }, 4000);
-        } else if (data.status === "starting") {
-          setOnline(false);
-          setStarting(true);
-        } else if (data.status === "stopping") {
-          setOnline(false);
-          setStopping(true);
-        } else if (data.status === "offline") {
-          setOnline(false);
-        }
-      });
-  }, []);
+  const fetchServerStatus = async () => {
+    try {
+      const response = await fetch("/api/status");
+      const data = await response.json();
 
-  const handleStartUp = () => {
-    setStarting(true);
-    fetch("/api/start");
-    setTimeout(() => {
-      fetch("/api/status")
-        .then((res) => res.json())
-        .then((data) => {
-          setServerStatus(data.status);
-          if (data.status === "online") {
-            setOnline(true);
-            setStarting(false);
-              setTimeout(async () => {
-              await fetch("/api/ip").then((res) => res.json()).then((data) => {
-                
-                  setIp(data.ip);
-                
-              });
-              }, 4000);
-          }
-        });
-    }, 23000);
+      setServerStatus(data.status);
+
+      if (data.status === "online") {
+        setOnline(true);
+        setStarting(false);
+        setStopping(false);
+        setTimeout(async () => {
+          const ipResponse = await fetch("/api/ip");
+          const ipData = await ipResponse.json();
+          setIp(ipData.ip);
+        }, normalFetchIpTime * 1000);
+        
+      } else if (data.status === "starting") {
+        setOnline(false);
+        setStarting(true);
+        setStopping(false);
+        setError(false);
+      } else if (data.status === "stopping") {
+        setOnline(false);
+        setStopping(true);
+        setStarting(false);
+        setError(false);
+      } else if (data.status === "offline") {
+        setOnline(false);
+        setStarting(false);
+        setStopping(false);
+        setError(false);
+      } else if (data.status === "crashed") {
+        setOnline(false);
+        setStarting(false);
+        setStopping(false);
+        setError(true);
+      }
+    } catch (error) {
+      console.error("Error fetching server status:", error);
+      setError(true);
+    }
   };
 
-  const handleStop = () => {
-    setStopping(true);
-    fetch("/api/stop");
-    setOnline(false);
-    setTimeout(() => {
-      setStopping(false);
-      fetch("/api/status")
-        .then((res) => res.json())
-        .then((data) => {
-          setServerStatus(data.status);
-          setOnline(false);
-          setStopping(false);
-        });
+  const fetchPlayers = async () => {
+    try {
+      const response = await fetch("/api/players");
+      const data = await response.json();
+      setPlayers(data.players);
+    } catch (error) {
+      console.error("Error fetching players:", error);
+    }
+  }
 
-    }, 7000);
+  useEffect(() => {
+    fetchServerStatus();
+    fetchPlayers();
+  }, []);
+
+  const handleStartUp = async () => {
+    setStarting(true);
+    await fetch("/api/start");
+    setTimeout(() => {
+      fetchServerStatus();
+      fetchPlayers();
+    }, normalStartTime * 1000);
+  };
+
+  const handleStop = async () => {
+    setStopping(true);
+    setOnline(false);
+    fetch("/api/stop");
+    setTimeout(() => {
+      fetchServerStatus();
+      
+    }, normalStopTime * 1000);
   };
 
   return (
-    <>
+    <div className="flex bg-black bg-opacity-80 min-[1200px]:p-32 p-16 min-h-screen ">
       <main
-        className={`min-h-screen text-white bg-black bg-opacity-80 font-minecraft tracking-wide min-[1000px]:p-32 p-16`}
+        className={`text-white font-minecraft tracking-wide`}
       >
+        <div>
         <div className="flex items-center gap-5 relative w-fit">
           <div className="text-5xl font-bold relative">
             <span className="z-20 relative select-none">kih gamers</span>
@@ -212,21 +238,22 @@ export default function Home() {
                 <span className="text-2xl">{ip.replace("tcp://", "")}</span>
               ) : (
                 <span className="text-2xl italic text-neutral-500">
-                  Fetching IP<AnimatedPeriods />
+                  Fetching IP
+                  <AnimatedPeriods />
                 </span>
               )
-              
             ) : starting ? (
               <span className="w-full flex justify-start">
-                <LoadingText totalSeconds={23} barLength={17} />
+                <LoadingText totalSeconds={normalStartTime} barLength={17} />
               </span>
             ) : stopping ? (
               <span className="w-full flex justify-start">
-                <LoadingText totalSeconds={7} barLength={17} />
+                <LoadingText totalSeconds={normalStopTime} barLength={17} />
               </span>
             ) : (
               <span className="italic text-neutral-500 text-2xl">
-                Server is not online<AnimatedPeriods />
+                Server is not online
+                <AnimatedPeriods />
               </span>
             )}
           </div>
@@ -315,9 +342,47 @@ export default function Home() {
             </span>
           </div>
         </div>
+        </div>
       </main>
-      <footer className="absolute bottom-0 left-0 right-0 text-center text-neutral-500 text-2xl">
-      </footer>
-    </>
+      <div className="text-white text-2xl flex flex-col w-full font-minecraft bg-black bg-opacity-60 ml-16 border-4 border-neutral-500">
+        {
+          players.length > 0 ? (
+            <>
+              <div className="">
+                {players.map((player) => (
+                  <div className="text-2xl w-full border-b-4 flex items-center h-[80px] border-neutral-800 hover:bg-neutral-900 px-6">
+                    {player}
+                    <div className="grow"></div>
+                    <div>
+                      <Image
+                        src={"https://mineskin.eu/helm/" + player + "/100.png"}
+                        alt="Player"
+                        width={50}
+                        height={50}
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </>
+          ) : (
+            <div className="w-full h-full flex flex-col items-center justify-center">
+            <Image
+              src="/load.gif"
+              alt="load"
+              width={150}
+              height={150}
+              className="brightness-[1.2]"
+            />
+            <br/>
+            <div className="italic text-neutral-500">
+              No one is playing
+            </div>
+            </div>
+          )
+        }
+        
+      </div>
+    </div>
   );
 }
