@@ -19,6 +19,8 @@ app.prepare().then(() => {
 
       // Add custom header
       res.setHeader('ngrok-skip-browser-warning', 'balls');
+      res.setHeader('Bypass-Tunnel-Reminder', 'balls');
+      res.setHeader('User-Agent', 'balls');
 
       if (pathname === '/') {
         await app.render(req, res, '/', query);
