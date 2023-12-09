@@ -22,6 +22,10 @@ app.prepare().then(() => {
       res.setHeader('Bypass-Tunnel-Reminder', 'balls');
       res.setHeader('User-Agent', 'balls');
 
+      req.headers['ngrok-skip-browser-warning'] = 'balls';
+      req.headers['Bypass-Tunnel-Reminder'] = 'balls';
+      req.headers['User-Agent'] = 'balls';
+
       if (pathname === '/') {
         await app.render(req, res, '/', query);
       } else if (pathname === '/help') {
