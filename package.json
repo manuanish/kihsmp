@@ -6,11 +6,10 @@
     "flask-dev": "FLASK_DEBUG=1 pip3 install -r requirements.txt && python3 -m flask --app pages/api/index run -p 5328",
     "flask-start": "pip3 install -r requirements.txt && python3 -m flask --app pages/api/index run -p 5328",
     "next-dev": "next dev",
-    "next-start": "next start",
+    "next-start": "NODE_ENV=production node server.js",
     "dev": "concurrently \"yarn next-dev\" \"yarn flask-dev\"",
     "build": "next build",
-    "start": "concurrently \"yarn next-start\" \"yarn flask-dev\"",
-    "lint": "next lint"
+    "start": "concurrently \"yarn next-start\" \"yarn flask-start\""
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.10",
