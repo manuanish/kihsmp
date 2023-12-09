@@ -245,8 +245,8 @@ export default function Home() {
         <meta name="twitter:url" content="https://kih.vercel.app/" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="flex min-[1200px]:p-32 p-16 min-h-screen">
-        <main className={`text-white font-minecraft tracking-wide `}>
+      <div className="flex min-[1200px]:p-32 p-16 min-h-screen mc-stuff">
+        <main className={`text-white font-minecraft tracking-wide background-[#000000CC]`}>
           <div>
             <div className="flex items-center gap-5 relative w-fit">
               <div className="text-5xl font-bold relative">

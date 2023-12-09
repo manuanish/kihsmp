@@ -3,20 +3,14 @@
 @tailwind utilities;
 
 html {
-  background-image: url("/dirt.webp");
+  scroll-behavior: smooth;
+  background-image: url("/D.png");
   background-repeat: repeat;
   background-position: center;
   background-size: 72px 72px;
-  scroll-behavior: smooth;
 }
-
-/* Change selection color */
 
 ::selection {
   background: #0070f3;
   color: #000000;
-}
-
-body {
-  background-color: #000000CC;
 }
