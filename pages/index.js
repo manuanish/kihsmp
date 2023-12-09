@@ -1,11 +1,41 @@
 import Image from "next/image";
 import Head from "next/head";
 import { useState, useEffect } from "react";
-import { Inter } from "next/font/google";
 import Link from "next/link";
 
-// If loading a variable font, you don't need to specify the font weight
-const inter = Inter({ subsets: ["latin"] });
+// Create a CountdownTimer component that takes a futureDate prop and returns a HH:MM:SS countdown to the date
+const CountdownTimer = ({ futureDate }) => {
+  const calculateTimeLeft = () => {
+    const difference = futureDate - new Date();
+    if (difference > 0) {
+      const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+      return { hours, minutes, seconds };
+    } else {
+      return { hours: 0, minutes: 0, seconds: 0 };
+    }
+  };
+
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, [futureDate]);
+
+  const formatTime = (value) => (value < 10 ? `0${value}` : value);
+
+  return (
+    <div>
+      <p>{`${formatTime(timeLeft.hours)}:${formatTime(timeLeft.minutes)}:${formatTime(timeLeft.seconds)}`}</p>
+    </div>
+  );
+};
+
 
 const LoadingText = ({ totalSeconds, barLength }) => {
   const [progress, setProgress] = useState(0);
@@ -98,6 +128,10 @@ export default function Home() {
   const normalStartTime = 30;
   const normalStopTime = 10;
   const normalFetchIpTime = 2;
+
+  const [isServerReleased, setIsServerReleased] = useState(false);
+  const [countdownDate, setCountdownDate] = useState(new Date("2023-12-12T00:00:00.000Z"));
+  const [allowCountdown, setAllowCountdown] = useState(false);
 
   const fetchServerStatus = async () => {
     try {
@@ -292,10 +326,27 @@ export default function Home() {
                     <LoadingText totalSeconds={normalStopTime} barLength={17} />
                   </span>
                 ) : (
-                  <span className="italic text-neutral-500 text-2xl">
-                    Server is not online
-                    <AnimatedPeriods />
-                  </span>
+                  isServerReleased ? (
+                    <span className="italic text-neutral-500 text-2xl">
+                      Server is not online
+                      <AnimatedPeriods />
+                    </span>
+                  ) : (
+                    <span className="text-neutral-500 text-2xl text-center">
+                      {/* <CountdownTimer futureDate={
+                        new Date(countdownDate)
+                      } /> */}
+                      {
+                        allowCountdown ? (
+                          <CountdownTimer futureDate={
+                            new Date(countdownDate)
+                          } />
+                        ) : (
+                          <span className="text-2xl">Coming Soon<AnimatedPeriods/></span>
+                        )
+                      }
+                    </span>
+                  )
                 )}
               </div>
             </div>
@@ -319,14 +370,25 @@ export default function Home() {
                   </button>
                 </div>
               ) : serverStatus ? (
-                <div className="border-[6px] border-black active:border-white">
-                  <button
-                    className="bg-green-600 w-[171px] px-12 py-4 text-3xl border-b-[12px] border-green-800 hover:border-b-[8px] hover:pt-[20px] active:bg-green-500 duration-[0.05s] select-none"
-                    onClick={handleStartUp}
-                  >
-                    Start
-                  </button>
-                </div>
+                isServerReleased ? (
+                  <div className="border-[6px] border-black active:border-white">
+                    <button
+                      className="bg-green-600 w-[171px] px-12 py-4 text-3xl border-b-[12px] border-green-800 hover:border-b-[8px] hover:pt-[20px] active:bg-green-500 duration-[0.05s] select-none"
+                      onClick={handleStartUp}
+                    >
+                      Start
+                    </button>
+                  </div>
+                ) : (
+                  <div className="border-[6px] border-black hover:cursor-not-allowed">
+                    <button
+                      disabled
+                      className="bg-green-600 w-[171px] px-12 py-4 text-3xl border-b-[8px] pt-[20px] border-green-800 hover:cursor-not-allowed opacity-30 select-none"
+                    >
+                      Start
+                    </button>
+                  </div>
+                )
               ) : (
                 <div className="border-[6px] border-black hover:cursor-not-allowed">
                   <button className="bg-green-600 w-[171px] px-12 py-4 text-3xl border-green-800 border-b-[8px] pt-[20px] hover:cursor-not-allowed opacity-30 select-none">
@@ -449,7 +511,7 @@ export default function Home() {
               <div className="font-bold text-2xl">Guide</div>
               <div className="text-neutral-500 text-2xl mt-1 max-w-[400px]">
                 About the server & a quick guide to install modpacks. (Click the
-                Book)
+                book)
               </div>
             </div>
           </Link>
