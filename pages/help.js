@@ -40,7 +40,7 @@ const HelpPage = () => {
         <meta name="twitter:url" content="https://kih.vercel.app/" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="bg-black bg-opacity-80 min-[1200px]:py-32 py-16 min-h-screen flex flex-col w-full justify-center items-center">
+      <div className="min-[1200px]:py-32 py-16 min-h-screen flex flex-col w-full justify-center items-center">
         <article class="prose prose-invert font-minecraft w-full prose-2xl prose-neutral">
           <h3>Guide & Tutorial</h3>
           <span className="italic text-neutral-500">Updated 9/12/23</span>
