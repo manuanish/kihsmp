@@ -10,7 +10,7 @@ app = Flask(__name__)
 # Global variables
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
-AUTH_TOKEN = "1k9GncCxk1oLRBG9jq1kI4AdFlL_4BKeuF5hrZKnUGRXXoYJG"
+AUTH_TOKEN = "2YIyXHFE77DGXU2iAQfZbE9QlXs_3oMwYG8HBmsYL6JA4UnBt"
 MAP_TOKEN = "2ZIMlZ5cneXXYxq6qSAipH9kg9r_5PUNQ7betkxS7NS4gmqiu"
 SERVER_DIRECTORY = os.path.join(SCRIPT_DIR, "../../ALL_SERVERS/SERVER/")
 START_FILE = "run.sh"
