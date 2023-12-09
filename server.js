@@ -18,7 +18,7 @@ app.prepare().then(() => {
       const { pathname, query } = parsedUrl;
 
       // Add custom header
-      res.setHeader('ngrok-skip-browser-warning', 'true');
+      res.setHeader('ngrok-skip-browser-warning', 'balls');
 
       if (pathname === '/') {
         await app.render(req, res, '/', query);
