@@ -11,6 +11,9 @@ module.exports = {
         minecraft: ["var(--font-minecraft)"],
       },
     },
+    listStyleType: {
+      square: "square",
+    },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };

@@ -11,10 +11,12 @@ app = Flask(__name__)
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 AUTH_TOKEN = "1k9GncCxk1oLRBG9jq1kI4AdFlL_4BKeuF5hrZKnUGRXXoYJG"
+MAP_TOKEN = "2ZIMlZ5cneXXYxq6qSAipH9kg9r_5PUNQ7betkxS7NS4gmqiu"
 SERVER_DIRECTORY = os.path.join(SCRIPT_DIR, "../../ALL_SERVERS/SERVER/")
 START_FILE = "run.sh"
 SERVER_STATUS = 0
 ADDRESS = False
+MAP_ADDRESS = False
 minecraft_process = False
 
 STARTED = "[Server thread/INFO] [net.minecraft.server.dedicated.DedicatedServer/]: Done"
@@ -86,11 +88,24 @@ def get_ip():
     else:
         return {"ip": ADDRESS}
 
+@app.route("/api/map")
+def get_map():
+    global SERVER_STATUS
+    global MAP_ADDRESS
+
+    if not MAP_ADDRESS:
+        listener = ngrok.forward(8123, "http", authtoken=MAP_TOKEN)
+        MAP_ADDRESS = listener.url()
+        return {"map": listener.url()}
+    else:
+        return {"map": MAP_ADDRESS}
+
 @app.route("/api/stop")
 def stop_server():
     global minecraft_process
     global SERVER_STATUS
     global ADDRESS
+    global MAP_ADDRESS
 
     ngrok.disconnect()
 
@@ -101,6 +116,7 @@ def stop_server():
         ngrok.disconnect()
         SERVER_STATUS = 0
         ADDRESS = False
+        MAP_ADDRESS = False
 
     return {"message": "Server stop command sent"}
 
@@ -113,11 +129,10 @@ def get_online_players():
             # Read the lines out as an array
             lines = f.readlines()
 
-            # Define regular expressions for player join and leave messages
-            join_pattern = re.compile(r'\[Server thread/INFO\]: (.+) joined the game')
-            leave_pattern = re.compile(r'\[Server thread/INFO\]: (.+) left the game')
-
-            # Extract online player usernames
+            # Define regular expressions for player join and leave messages eg. 
+            join_pattern = re.compile(r"(.*) joined the game")
+            leave_pattern = re.compile(r"(.*) left the game")
+            
             online_players = set()
 
             for line in lines:
@@ -127,7 +142,7 @@ def get_online_players():
                 if join_match:
                     online_players.add(join_match.group(1))
                 elif leave_match:
-                    online_players.discard(leave_match.group(1))
+                    online_players.remove(leave_match.group(1))
             
             return {"players": list(online_players)}
 

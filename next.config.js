@@ -15,10 +15,10 @@ const nextConfig = {
     remotePatterns: [
       // Allow "https://mineskin.eu/helm/" + player + "/100.png"
       {
-        protocol: 'https',
-        hostname: 'mineskin.eu',
-        port: '',
-        pathname: '/helm/**',
+        protocol: "https",
+        hostname: "mineskin.eu",
+        port: "",
+        pathname: "/**",
       },
     ],
   },
