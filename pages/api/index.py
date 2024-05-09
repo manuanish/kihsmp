@@ -10,8 +10,11 @@ app = Flask(__name__)
 # Global variables
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
-AUTH_TOKEN = "2YIyXHFE77DGXU2iAQfZbE9QlXs_3oMwYG8HBmsYL6JA4UnBt"
-MAP_TOKEN = "2ZIMlZ5cneXXYxq6qSAipH9kg9r_5PUNQ7betkxS7NS4gmqiu"
+# Replace with your own ngrok auth token!
+AUTH_TOKEN = "1q2w3e4r5t6y7u8i9o0p"
+MAP_TOKEN = "1q2w3e4r5t6y7u8i9o0p"
+
+
 SERVER_DIRECTORY = os.path.join(SCRIPT_DIR, "../../ALL_SERVERS/SERVER/")
 START_FILE = "run.sh"
 SERVER_STATUS = 0

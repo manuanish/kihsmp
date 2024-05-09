@@ -1,40 +1,69 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+![kih smp](public/display.gif)
+
+# kih smp
+
+basically rewrote the next.js server so it can connect to a custom Python 3 API. The API can run a 1.20.* minecraft servers on a Raspberry Pi using ngrok. *NOTE: only works on UNIX systems*
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository to your local machine.
+
+2. Install the dependencies by running `npm install` or `yarn install`.
+
+3. Replace the `AUTH_TOKEN` and `MAP_TOKEN` in [`pages/api/index.py`](pages/api/index.py) with your own ngrok auth token.
+
+4. Install your Forge modded Minecraft server in the `ALL_SERVERS/SERVER` directory.
+
+5. Run the development server:
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Assuming your Raspberry Pi is connected to the same network as your local machine, you should be able to access the server at the IP address of the Raspberry Pi on port 3000. To find the IP address of the Raspberry Pi, you can run the following command on the Raspberry Pi:
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```bash
+ifconfig
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## API Endpoints
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- `/api/status`: Get the status of the Minecraft server.
+- `/api/start`: Start the Minecraft server.
+- `/api/ip`: Get the IP address of the Minecraft server.
+- `/api/map`: Get the map of the Minecraft server.
+- `/api/stop`: Stop the Minecraft server.
+- `/api/players`: Get the online players on the Minecraft server.
 
-## Learn More
+## Building
+To build the project, run the following command:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+yarn build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This will build the project for production and output the files to the `.next` directory.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Deployment
+To run the server in production mode, run the following command:
 
-## Deploy on Vercel
+```bash
+yarn start
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Hosting the Application
+Unfortunately, the application cannot be hosted on Vercel due to the fact that the server is not serverless. However, you can host the application on a Raspberry Pi or any other server that supports Node.js. Here is the basic ngrok command to expose the server to the internet:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```bash
+./ngrok http 3000
+```
+
+**Note:** For fixed subdomains, you can setup a simple reverse proxy using Nginx or Apache.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
